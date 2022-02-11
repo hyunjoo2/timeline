@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" charset="UTF-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title></title>
+
+
+
+    <link rel="stylesheet" href="./resource/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./resource/css/swiper.min.css">
+    <link rel="stylesheet" href="./resource/css/reset.css">
+    <link rel="stylesheet" href="./resource/css/main.css">
+    <link rel="stylesheet" href="./resource/css/common.css">
+    <link rel="stylesheet" href="./resource/css/sub.css">
+    <link rel="stylesheet" href="./resource/css/timeline.css">
+
+
+
+    <script src="./resource/js/jquery-3.5.1.min.js"></script>
+    <script src="./resource/js/bootstrap.min.js"></script>
+    <script src="./resource/js/swiper.min.js"></script>
+
+    <script src="./resource/js/main.js"></script>
+    <script src="./resource/js/common.js"></script>
+    <script src="./resource/js/sub.js"></script>
+
+    <script src="./resource/js/TweenMax.min.js"></script>
+
+
+
+    <!-- bootstrap -->
+    <script src="./resource/js/framework/lib/bootstrap/bootstrap.min.js"></script>
+
+
+    <!-- notify -->
+
+
+    <script src="./resource/js/hamMenu.js"></script>
+
+
+    <script src="./resource/js/timeline.js"></script>
+
+</head>
+
+
+<body>
+    <div class="wrap">
+
+        <!-- HTML CONTENTS -->
+        <div class="container-fluid no-padding">
+
+
+            <div class="skipnav">
+                <a href="#con_start">본문 바로가기</a>
+                <a href="#footer">푸터 바로가기</a>
+            </div>
+
+            <header class="header">
+                <div class="gnb-wrap">
+                    <div class="inner row cf">
+                        <h1 class="logo">
+                            <a href="/user/main/main">
+                                <img src="./resource/images/main/logo_sub.png" alt="KIST 청정대기센터">
+                            </a>
+                        </h1>
+                        <div class="gnb">
+                            <div class="">
+                                <a href="javascript:void(0)"><span>청정대기센터</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="/user/introduce/greeting">인사말</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/introduce/role">임무 및 역할</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/news/conference">출연연 미세먼지 협의체</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/introduce/organization">조직도</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="">
+                                <a href="javascript:void(0)"><span>연구사업</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="/user/business/guide">사업안내 및 추진체계</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/business/science">세부 사업별 연구소개</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="">
+                                <a href="javascript:void(0)"><span>소식</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="/user/news/notice">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/news/forum">행사</a>
+                                    </li>
+                                    <!-- <li>
+							<a href="/user/news/externalData">외부 소식</a>
+						</li> -->
+                                </ul>
+                            </div>
+                            <div class="">
+                                <a href="javascript:void(0)"><span>자료실</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="/user/reference/policyList">미세먼지 정책 및 법령</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/reference/centerList">발간자료</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/reference/referList">참고자료</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/reference/reportList">외부보고서</a>
+                                    </li>
+                                    <li>
+                                        <a href="/user/reference/related">관련기관</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="hover-bar-wrap">
+                            <div class="gnb-hover-bar" style="left: 89px;"></div>
+                        </div>
+                        <div class="side-bg"></div>
+                        <div class="menuRight">
+                            <ul class="navbar-nav center-block ml-auto">
+                                <li>
+                                    <div class="site-btn">
+                                        <button type="button"><a href="https://cleanair.kist.re.kr/user/db/main"
+                                                target="_blank">미세먼지분야<br>과제정보</a></button>
+                                    </div>
+                                </li>
+                                <li class="nav-item active link_en p-3">
+                                    <a class="nav-link" href="/user/eng/main">ENG <span class="sr-only"></span></a>
+                                </li>
+                                <li class="nav-item active data_apply d-flex justify-content-center">
+                                    <a class="nav-link" href="/user/news/dataApply">자료신청 <span
+                                            class="sr-only"></span></a>
+                                </li>
+
+                                <li class="nav-item active show ham_menu">
+                                    <div class="hamWrap">
+                                        <div class="hamWrap2">
+                                            <div id="ham" class="ham ham2 main_ham">
+                                                <span></span> <span></span> <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="hamNavibar">
+                                            <div class="inner-box">
+                                                <div class="menu-wr">
+                                                    <ul class="Mmain_menu">
+                                                        <li class="nav-item active link_kist_m">
+                                                            <a class="nav-link"
+                                                                href="https://www.kist.re.kr/kist_web/main/"
+                                                                target="_blank" title="새창 열림"><img
+                                                                    src="./resource/images/main/logo_hammn.png"
+                                                                    alt="KIST 한국과학기술연구원"><span
+                                                                    class="sr-only"></span></a>
+                                                        </li>
+                                                        <li class="link_kist_m list_site">
+                                                            <div class="button-wrap">
+                                                                <button type="button"
+                                                                    onclick="window.open('https://cleanair.kist.re.kr/user/db/main')"
+                                                                    target="_blank" title="새창 열림">미세먼지분야과제정보</button>
+                                                                <button type="button"
+                                                                    onclick="window.open('https://www.kist.re.kr/kist_web/main/')"
+                                                                    target="_blank" title="새창 열림">KIST
+                                                                    한국과학기술연구원</button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-has-children">
+                                                            <a href="javascript:void(0)" class="click">청정대기센터</a>
+                                                            <ul class="child">
+                                                                <li>
+                                                                    <a href="/user/introduce/greeting">인사말</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/introduce/role">임무 및 역할</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/news/conference">출연연 미세먼지 협의체</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/introduce/organization">조직도</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="item-has-children">
+                                                            <a href="javascript:void(0)" class="click">연구사업</a>
+                                                            <ul class="child">
+                                                                <li>
+                                                                    <a href="/user/business/guide">사업안내 및 추진체계</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/business/science">세부 사업별 연구소개</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="item-has-children">
+                                                            <a href="javascript:void(0)" class="click">소식</a>
+                                                            <ul class="child">
+                                                                <li>
+                                                                    <a href="/user/news/notice">공지사항</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/news/forum">행사</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="item-has-children">
+                                                            <a href="javascript:void(0)" class="click">자료실</a>
+                                                            <ul class="child">
+                                                                <li>
+                                                                    <a href="/user/reference/policyList">미세먼지 정책 및
+                                                                        법령</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/reference/centerList">발간자료</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/reference/referList">참고자료</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/reference/reportList">외부보고서</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/user/reference/related">관련기관</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="HamBottom">
+                                                    <p></p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div> <!-- //inner row cf -->
+
+                </div> <!-- //gnb-wrap -->
+
+            </header>
+
+
+            <div class="sub_visual news w-100 ">
+                <!-- 클래스 따라 서브비주얼 변경 -->
+                <h1 class="text-center pb-0 mb-0">청정대기센터</h1>
+            </div>
+
+            <div class="u-page-breadcrumb container sub p-0">
+                <div class="u-page-breadcrumb__wrap">
+                    <div
+                        class="u-page-breadcrumb__item u-page-breadcrumb__item--home u-page-breadcrumb__item--mobile-hide">
+                        <a href="/user/main/main" class="u-page-breadcrumb__link">메인</a>
+                    </div>
+                    <div class="u-page-breadcrumb__item u-page-breadcrumb__item--mobile-hide">
+                        <a href="javascript:void(0);" class="u-page-breadcrumb__link" id="firstMenu">청정대기센터</a>
+
+                        <ul class="u-page-list u-page-list--depth1">
+                            <li class="u-page-list__item ">
+                                <a href="/user/introduce/greeting" class="u-page-list__link">청정대기센터</a>
+                            </li>
+                            <li class="u-page-list__item ">
+                                <a href="/user/business/guide" class="u-page-list__link">연구사업</a>
+                            </li>
+                            <li class="u-page-list__item ">
+                                <a href="/user/news/notice" class="u-page-list__link">소식</a>
+                            </li>
+                            <li class="u-page-list__item ">
+                                <a href="/user/reference/lawList" class="u-page-list__link">자료실</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="u-page-breadcrumb__item u-page-breadcrumb__item--last">
+                        <a href="javascript:void(0);" class="u-page-breadcrumb__link" id="subMenu">인사말</a>
+
+                        <ul class="u-page-list u-page-list--depth2">
+                            <li class="u-page-list__item active">
+                                <a href="/user/introduce/greeting" class="u-page-list__link">인사말</a>
+                            </li>
+                            <li class="u-page-list__item ">
+                                <a href="/user/introduce/role" class="u-page-list__link">임무 및 역할</a>
+                            </li>
+                            <li class="u-page-list__item ">
+                                <a href="/user/news/conference" class="u-page-list__link">출연연 미세먼지 협의체</a>
+                            </li>
+                            <li class="u-page-list__item ">
+                                <a href="/user/introduce/organization" class="u-page-list__link">조직도</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="u-page-breadcrumb__shadow"></div>
+            </div><!-- end :: class :: u-page-breadcrumb -->
+        </div><!-- end::class::sub_visual -->
+
+
+        <section class="clearfix container no-padding mb-5 sub_content" id="content">
+            <div class="content_wrap">
+                <nav class="navbar navbar-expand-md search-bar mb-0 p-0">
+                    <p class="navbar-brand ng-binding totalCount no-padding mb-0" href="#">총 게시물 : <strong
+                            id="totalCount">8</strong></p>
+                    <div class="collapse navbar-collapse search show" id="">
+                        <div class="d-flex ml-auto">
+                            <div class="d-flex">
+                                <div class="form-select">
+                                    <select id=" " name="" class="select nav-link">
+                                        <option value="">전체 카테고리</option>
+                                        <option value="">제목</option>
+                                        <option value="">내용</option>
+                                    </select>
+                                </div>
+                                <div class="form-select">
+                                    <select id="" name="" class="select nav-link">
+                                        <option value="">연도별</option>
+                                        <option value="">2022년</option>
+                                        <option value="">2021년</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-select">
+                                <select id="" name="" class="select nav-link">
+                                    <option value="">최신순</option>
+                                    <option value="">과거순</option>
+                                </select>
+                            </div>
+                            <div class="button-wrap">
+                                <button type="button" class="button-excel"></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="category">
+                    <div class="category__inner d-flex">
+                        <div class="ovr">해외</div>
+                        <div class="dom">국내</div>
+                    </div>
+                </div>
+                <div id="timeline">
+                    
+
+                    <!-- 빈 페이지 -->
+                    <div id="emptyDiv" class="center_wrap step1 empty_center">
+                        <p class="inform">해당되는 시계열 내용이 없습니다.</p>
+                    </div>
+                    <div id="nonEmptyDiv" class="center_wrap step1">
+                        <div class="guide"><strong>시계열 화면</strong>
+                            <p>선택한 주제의 경제 정책을<br>시계열 형태로 보여줍니다.</p>
+                            <img src="/resources/images/timetree_guide1.png" alt="">
+                        </div>
+                       
+                        <div class="controller">
+                            <div class="wrap">
+                                <button type="button" id="btnScroolDown" class="down" onclick="fnScrollDown();">
+                                    <span class="sr-only">아래로</span>
+                                </button>
+                                <button class="btnTop" onclick="fnTop(this);"><span>TOP</span></button>
+                            </div>
+                        </div>
+
+                        <div class="scroll_area mCustomScrollbar _mCS_3 mCS-autoHide"
+                            style="position: relative; overflow: visible;">
+                            <div id="mCSB_3" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
+                                tabindex="0" style="max-height: none;">
+                                <div id="mCSB_3_container" class="mCSB_container">
+                                    <div class="timeline_wrap">
+                                        <div id="timeLineStartDiv" class="tree_wrap">
+                                            <h4>2022</h4>
+                                            <ul class="box">
+                                                <li><span class="tree_point color_bg2">01.20</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72619"
+                                                                onclick="fnCtePageLoad(this, 72619, 'CTE');">제53차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72619, 'PRES', '14');">언론동향<span
+                                                                            class="num">14</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72619, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">01.06</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72578"
+                                                                onclick="fnCtePageLoad(this, 72578, 'CTE');">제52차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72578, 'POLC', '2');">정책해설<span
+                                                                            class="num">2</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72578, 'PRES', '10');">언론동향<span
+                                                                            class="num">10</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72578, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <h4>2021</h4>
+                                            <ul class="box">
+                                                <li><span class="tree_point color_bg1">12.30</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72570"
+                                                                onclick="fnCtePageLoad(this, 72570, 'CTE');">제51차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72570, 'POLC', '1');">정책해설<span
+                                                                            class="num">1</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72570, 'PRES', '10');">언론동향<span
+                                                                            class="num">10</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72570, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg2">12.22</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72588"
+                                                                onclick="fnCtePageLoad(this, 72588, 'CTE');">2022년 기획재정부
+                                                                업무계획</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72588, 'POLC', '4');">정책해설<span
+                                                                            class="num">4</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72588, 'PRES', '8');">언론동향<span
+                                                                            class="num">8</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72588, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg3">12.20</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72545"
+                                                                onclick="fnCtePageLoad(this, 72545, 'CTE');">2022년
+                                                                경제정책방향<span class="line_ico lic01">update</span></a>
+                                                        </div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72545, 'POLC', '13');">정책해설<span
+                                                                            class="num">13</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72545, 'PRES', '20');">언론동향<span
+                                                                            class="num">20</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POL"
+                                                                        onclick="fnCtePageLoad(this, 72545, 'POL', '1');">여론조사<span
+                                                                            class="num">1</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72545, 'SITE', '18');">관련사이트<span
+                                                                            class="num">18</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">12.16</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72572"
+                                                                onclick="fnCtePageLoad(this, 72572, 'CTE');">제50차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72572, 'POLC', '1');">정책해설<span
+                                                                            class="num">1</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72572, 'PRES', '11');">언론동향<span
+                                                                            class="num">11</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72572, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">12.02</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72507"
+                                                                onclick="fnCtePageLoad(this, 72507, 'CTE');">제49차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72507, 'POLC', '2');">정책해설<span
+                                                                            class="num">2</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72507, 'PRES', '8');">언론동향<span
+                                                                            class="num">8</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72507, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">11.23</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72492"
+                                                                onclick="fnCtePageLoad(this, 72492, 'CTE');">제48차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72492, 'POLC', '2');">정책해설<span
+                                                                            class="num">2</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72492, 'PRES', '10');">언론동향<span
+                                                                            class="num">10</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72492, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">10.26</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72408"
+                                                                onclick="fnCtePageLoad(this, 72408, 'CTE');">제47차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72408, 'POLC', '2');">정책해설<span
+                                                                            class="num">2</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72408, 'PRES', '12');">언론동향<span
+                                                                            class="num">12</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72408, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg2">10.16</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72405"
+                                                                onclick="fnCtePageLoad(this, 72405, 'CTE');">2050 탄소중립
+                                                                시나리오안 / 2030 국가 온실가스 감축목표 상향안</a><button type="button"
+                                                                class="glyphicon glyphicon-plus color_font2"
+                                                                data-color="color_bg2"
+                                                                onclick="fnSearchFrwdHistEpic(this, 72405)"><span
+                                                                    class="sr-only">후속정책 보기</span></button></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="FRWD"
+                                                                        onclick="fnCtePageLoad(this, 72405, 'FRWD', '44');">추진내역<span
+                                                                            class="num">44</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72405, 'POLC', '2');">정책해설<span
+                                                                            class="num">2</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72405, 'PRES', '17');">언론동향<span
+                                                                            class="num">17</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="RSCH"
+                                                                        onclick="fnCtePageLoad(this, 72405, 'RSCH', '3');">연구자료<span
+                                                                            class="num">3</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72405, 'SITE', '2');">관련사이트<span
+                                                                            class="num">2</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">09.30</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72345"
+                                                                onclick="fnCtePageLoad(this, 72345, 'CTE');">제46차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72345, 'POLC', '1');">정책해설<span
+                                                                            class="num">1</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72345, 'PRES', '8');">언론동향<span
+                                                                            class="num">8</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72345, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg2">09.27</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72388"
+                                                                onclick="fnCtePageLoad(this, 72388, 'CTE');">상생소비지원금
+                                                                시행방안</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72388, 'POLC', '4');">정책해설<span
+                                                                            class="num">4</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72388, 'PRES', '13');">언론동향<span
+                                                                            class="num">13</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72388, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">09.16</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72299"
+                                                                onclick="fnCtePageLoad(this, 72299, 'CTE');">제45차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72299, 'POLC', '1');">정책해설<span
+                                                                            class="num">1</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72299, 'PRES', '8');">언론동향<span
+                                                                            class="num">8</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72299, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg2">08.26</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72487"
+                                                                onclick="fnCtePageLoad(this, 72487, 'CTE');">소상공인 코로나19
+                                                                영향 점검 및 추가 지원방안</a><button type="button"
+                                                                class="glyphicon glyphicon-plus color_font2"
+                                                                data-color="color_bg2"
+                                                                onclick="fnSearchFrwdHistEpic(this, 72487)"><span
+                                                                    class="sr-only">후속정책 보기</span></button></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="FRWD"
+                                                                        onclick="fnCtePageLoad(this, 72487, 'FRWD', '1');">추진내역<span
+                                                                            class="num">1</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72487, 'PRES', '4');">언론동향<span
+                                                                            class="num">4</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72487, 'SITE', '4');">관련사이트<span
+                                                                            class="num">4</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg2">08.26</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72328"
+                                                                onclick="fnCtePageLoad(this, 72328, 'CTE');">청년특별대책</a><button
+                                                                type="button"
+                                                                class="glyphicon glyphicon-plus color_font2"
+                                                                data-color="color_bg2"
+                                                                onclick="fnSearchFrwdHistEpic(this, 72328)"><span
+                                                                    class="sr-only">후속정책 보기</span></button></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="FRWD"
+                                                                        onclick="fnCtePageLoad(this, 72328, 'FRWD', '6');">추진내역<span
+                                                                            class="num">6</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72328, 'POLC', '5');">정책해설<span
+                                                                            class="num">5</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72328, 'PRES', '15');">언론동향<span
+                                                                            class="num">15</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72328, 'SITE', '17');">관련사이트<span
+                                                                            class="num">17</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">08.26</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72225"
+                                                                onclick="fnCtePageLoad(this, 72225, 'CTE');">제44차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72225, 'POLC', '5');">정책해설<span
+                                                                            class="num">5</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72225, 'PRES', '13');">언론동향<span
+                                                                            class="num">13</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72225, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">08.12</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72185"
+                                                                onclick="fnCtePageLoad(this, 72185, 'CTE');">제43차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72185, 'POLC', '3');">정책해설<span
+                                                                            class="num">3</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72185, 'PRES', '8');">언론동향<span
+                                                                            class="num">8</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72185, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">08.05</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72166"
+                                                                onclick="fnCtePageLoad(this, 72166, 'CTE');">제42차 비상경제
+                                                                중앙대책본부 회의</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72166, 'POLC', '4');">정책해설<span
+                                                                            class="num">4</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72166, 'PRES', '10');">언론동향<span
+                                                                            class="num">10</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72166, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg1">07.22</span>
+                                                    <div class="policy_panel right">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72126"
+                                                                onclick="fnCtePageLoad(this, 72126, 'CTE');">제41차 비상경제
+                                                                중앙대책본부 회의 겸 제13차 한국판 뉴딜 관계장관회의 </a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72126, 'POLC', '1');">정책해설<span
+                                                                            class="num">1</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72126, 'PRES', '4');">언론동향<span
+                                                                            class="num">4</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72126, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><span class="tree_point color_bg2">07.22</span>
+                                                    <div class="policy_panel">
+                                                        <div class="policy_title"><a href="#this"
+                                                                data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                data-all_yn="N" data-cte_seq="72110"
+                                                                onclick="fnCtePageLoad(this, 72110, 'CTE');">디지털전환·탄소중립
+                                                                대응을 위한 선제적 사업구조개편 활성화 방안</a></div>
+                                                        <ul class="policy_list"></ul>
+                                                        <div class="policy_state">
+                                                            <ul>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="POLC"
+                                                                        onclick="fnCtePageLoad(this, 72110, 'POLC', '2');">정책해설<span
+                                                                            class="num">2</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="PRES"
+                                                                        onclick="fnCtePageLoad(this, 72110, 'PRES', '5');">언론동향<span
+                                                                            class="num">5</span></a></li>
+                                                                <li><a href="#this"
+                                                                        data-relt_them_cd="IRELT_THEM00011IRELT_THEM00085IRELT_THEM00012IRELT_THEM00013"
+                                                                        data-all_yn="N" data-dvsn="SITE"
+                                                                        onclick="fnCtePageLoad(this, 72110, 'SITE', '1');">관련사이트<span
+                                                                            class="num">1</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="mCSB_3_scrollbar_vertical"
+                                class="mCSB_scrollTools mCSB_3_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
+                                style="display: block;">
+                                <div class="mCSB_draggerContainer">
+                                    <div id="mCSB_3_dragger_vertical" class="mCSB_dragger"
+                                        style="position: absolute; min-height: 50px; top: 0px; display: block; height: 226px; max-height: 775px;">
+                                        <div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+                                    </div>
+                                    <div class="mCSB_draggerRail"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="centerSwitch switch step1">
+                        <button type="button" id="btnRightSwitch" onclick="fnRightSwitch();">
+                            <i class="glyphicon glyphicon-menu-right"></i><span class="sr-only">닫기</span>
+                        </button>
+                    </div>
+                    <div id="cteArrowDiv" class="centerSwitch switch detail step1" style="display:none;">
+                        <button type="button" onclick="fnLeftSwitch();">
+                            <i class="glyphicon glyphicon-menu-right"></i><span class="sr-only">열기</span>
+                        </button>
+                    </div>
+                    <div class="rightSwitch switch step1">
+                        <img src="/resources/images/timetree_txt01.png" alt="시계열의 정책을 클릭하시면 상세내용을 확인하실 수 있습니다.">
+                    </div>
+                    <!-- 모바일 타임라인 목록 -->
+                    <div class="m_policy_top step1">
+                        <button type="button" data-spy="affix" data-offset-top="60"><span class="container">&lt; 시계열
+                                화면으로 돌아가기</span></button>
+                        <div class="container">
+                            <div class="location">
+                                <p class="label">선택주제</p>
+                                <ul>
+                                    <li id="mReltThemBigNm"></li>
+                                    <li id="mReltThemMidNm"></li>
+                                    <li id="mReltThemSmlNm"></li>
+                                </ul>
+                            </div>
+                            <label for="mTimeLineList" class="sr-only">대책 리스트</label>
+                            <select id="mTimeLineList" onchange="fnMTimeReSearch(this);"></select>
+                        </div>
+                    </div>
+                    <!-- 우측 -->
+                    <div id="cteDiv" class="right_wrap step1">
+                        <div class="guide">
+                            <strong>상세 화면</strong>
+                            <p>시계열에서 선택한 정책의 상세내용(추진내역, 정책해설, 언론동향,<br>연구자료, 여론조사, 관련사이트)을 보여줍니다.</p>
+                            <img src="/resources/images/timetree_guide2.png" alt="">
+                        </div>
+                    </div>
+                    <!-- 우측 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer id="footer" class="">
+            <div class="inner">
+                <section>
+                    <div class="logo_inner">
+                        <a href="https://www.kist.re.kr/kist_web/main/" target="_blank">
+                            <img src="./resource/images/main/logo_footer_211206.png" alt="KIST 청정대기센터">
+                        </a>
+                    </div>
+                    <div class="img_wrap mb-3">
+                        <img src="./resource/images/main/logo_footer.png" alt="KIST 청정대기센터">
+                    </div>
+                    <address>
+                        <span class="detail mt_20">(02792) 서울특별시 성북구 화랑로 14길 5 KIST 청정대기센터 대기정책팀
+                            <br>E-mail:cleanair@kist.re.kr
+                            <b>Copyright © Korea Institute of Science and Technology. All rights reserved.</b></span>
+                        <!-- <span class="right mt_10">E-mail : cleanair@kist.re.kr</span> -->
+                    </address>
+                </section>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
