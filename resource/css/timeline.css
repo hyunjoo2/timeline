@@ -95,7 +95,7 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 
 /* step2 left */
 .content-left{transition: all .3s;}
-.content-left.step2{flex:none; width: 39.24% ; padding-top: 2rem; background: #f8f8f8;}
+.content-left.step2{position:relative; flex:none; width: 39.24% ; padding-top: 2rem; background: #f8f8f8;}
 
 .step2 .totalCount{margin-bottom:1.5rem !important;}
 .step2 .search-bar{-ms-flex-wrap: wrap;flex-wrap: wrap;}
@@ -121,9 +121,21 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 .step2 .timeline-content>div .date{left: 1rem; right: auto}
 .step2 .timeline-content>div::before{ left: 7.2rem; width:3rem; }
 .step2 .timeline-content>div.ovr{left: 0; right:auto;}
+.timeline-content>div::after{right:auto; left: 10rem;}
 
 .step2 .timeline-button__bottom button{margin: 0; padding:2rem 2.5rem}
 .step2 .timeline-button__bottom::before{height: 9.8rem; background: url(../images/sub/bg-gradientStep02.png);}
 
+.step2 .timeline-content>div .timeline-item{border-color: #bbbbbb;}
+.step2 .timeline-content>div.ovr .timeline-item.on{border-color: #006db2;}
+.step2 .timeline-content>div.dom .timeline-item.on{border-color: #00a0a2;}
+
+
+
+
 /* step2 right */
-.content_wrap.step2 .content-right{flex:1;}
+.btnRightSwitch{display: none;}
+.content_wrap.step2 .btnRightSwitch{display: block; position:absolute; top: 50%; right:-1.6rem; transform: translateY(-50%);   z-index: 999; }
+.content_wrap.step2 .btnRightSwitch button{ width:3.3rem; height:3.3rem; border-radius: 100%; background: #ffffff url(../images/sub/icon-arrow__right.png)no-repeat center; background-size: 1rem 1.7rem; box-shadow: .3rem .3rem 1.5rem rgba(0,0,0,0.2);}
+.content_wrap.step2 .content-right{flex:1; margin-left:4rem; padding:2rem 0;}
+

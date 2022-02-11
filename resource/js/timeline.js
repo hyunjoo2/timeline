@@ -34,7 +34,15 @@ function buttonClick(){
         $(".content_wrap").addClass("step2");
         $(".content-left").addClass("step2");
         $(".content-right").show();
+        $(this).parents().find('.timeline-content').children().find(".timeline-item").removeClass("on");
+        $(this).parents().closest('.timeline-item').addClass("on");
+        
+    });
 
-    })
+    $(".btnRightSwitch button").click(function(){
+        $(".content_wrap").removeClass("step2");
+        $(".content-left").removeClass("step2");
+        $(".content-right").hide();
+    });
 }
 
