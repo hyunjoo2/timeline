@@ -112,7 +112,7 @@ y-axis
 		width: 4px;
 		height: 100%;
 		margin: 0 auto;
-        margin-right: -8px;
+        margin-right: 0px;
 		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
 		text-align: center;
 	}
