@@ -171,7 +171,8 @@ function fnPageResize() {
             theme: 'minimal-dark',
             mouseWheel: {
                 scrollAmount: 400
-            },                        
+            },
+            //scrollInertia : 400,                        
             callbacks:{
                 onInit:function() {
                     $('.timeline__inner').mCustomScrollbar('scrollTo', 0);
@@ -180,3 +181,24 @@ function fnPageResize() {
         });
     }
 }
+
+
+$( window ).resize( function() {
+    var innerWidth = window.innerWidth;
+    if(innerWidth <= 721) {
+        $('.timeline__inner').mCustomScrollbar('destroy');
+    } else {
+    	$('.timeline__inner').mCustomScrollbar({
+            theme: 'minimal-dark',
+            mouseWheel: {
+                scrollAmount: 400
+            },
+            //scrollInertia : 400,                        
+            callbacks:{
+                onInit:function() {
+                    $('.timeline__inner').mCustomScrollbar('scrollTo', 0);
+                }
+            }
+        });
+    }
+  } );
