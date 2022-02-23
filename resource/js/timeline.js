@@ -134,16 +134,16 @@ function tabSelect() {
 
 
 function fixYear(){
-    var filter_Offset = $('.timeline-box .year').offset();
+    var filter_Offset = $('.timelinePage .content_wrap .category').offset();
 		$(window).scroll(function() 
 		{
 			if ( $(document).scrollTop() > filter_Offset.top ) 
 			{
-			   $('.timeline-box .year').addClass('fix');
+			   $('.timelinePage .content_wrap').addClass('fix');
 			} 
 			else 
 			{
-			   $('.timeline-box .year').removeClass('fix');
+			   $('.timelinePage .content_wrap').removeClass('fix');
 			}
 		});
 }
