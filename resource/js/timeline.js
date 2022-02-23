@@ -5,6 +5,7 @@ $(function () {
     tabSelect();
     //clickboardList();
     fixYear();
+    fnPageResize();
 })
 
 function fnTop() {
@@ -146,4 +147,36 @@ function fixYear(){
 			   $('.timelinePage .content_wrap').removeClass('fix');
 			}
 		});
+}
+
+
+
+// 모바일일 경우 시계열 선택시 스크롤 이동
+// function fnMobileScroll(){
+// 	var innerWidth = window.innerWidth;
+// 	if(innerWidth <= 992){
+// 	    var scrollPosition = $("#nonEmptyDiv").offset().top;
+// 		$("html, body").animate({
+// 			scrollTop : scrollPosition
+// 		});
+// 	}
+// }
+
+function fnPageResize() {
+	var innerWidth = window.innerWidth;
+    if(innerWidth <= 721) {
+        $('.timeline__inner').mCustomScrollbar('destroy');
+    } else {
+    	$('.timeline__inner').mCustomScrollbar({
+            theme: 'minimal-dark',
+            mouseWheel: {
+                scrollAmount: 400
+            },                        
+            callbacks:{
+                onInit:function() {
+                    $('.timeline__inner').mCustomScrollbar('scrollTo', 0);
+                }
+            }
+        });
+    }
 }

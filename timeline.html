@@ -328,899 +328,514 @@
 
         <section class="clearfix container timelinePage sub_content" id="content">
             <div class="content_wrap w-100">
-                <div class="content-left">
-                    <div class="btnRightSwitch">
-                        <button type="button"></button>
+                <div class="page-header sub">
+					<h1 class="text-center pb-5 mb-0">공지사항</h1>
+				</div>
+                <div class="content-timeline">
+                    <div class="btnRightSwitch mobile">
+                        <button type="button"><i></i> 시계열 화면으로 돌아가기</button>
                     </div>
-                    <nav class="navbar navbar-expand-md search-bar mb-0 p-0">
-                        <p class="navbar-brand ng-binding totalCount no-padding mb-0" href="#">정부 정책 시계열 데이터 : <strong
-                                id="totalCount">8</strong></p>
-                        <div class="collapse navbar-collapse search show" id="">
-                            <div class="d-flex ml-auto">
-                                <div class="form-select w-215">
-                                    <select id=" " name="" class="select nav-link">
-                                        <option value="">전체 카테고리</option>
-                                        <option value="">제목</option>
-                                        <option value="">내용</option>
-                                    </select>
-                                </div>
-                                <div class="form-select w-145">
-                                    <select id="" name="" class="select nav-link">
-                                        <option value="">연도별</option>
-                                        <option value="">2022년</option>
-                                        <option value="">2021년</option>
-                                    </select>
-                                </div>
-                                <div class="form-select w-145">
-                                    <select id="" name="" class="select nav-link">
-                                        <option value="">최신순</option>
-                                        <option value="">과거순</option>
-                                    </select>
-                                </div>
-                                <div class="button-wrap">
-                                    <button type="button" class="button-excel"><img
-                                            src="./resource/images/sub/icon-excel.png" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="category">
-                        <div class="category__inner d-flex">
-                            <div class="ovr active">해외</div> <!-- 전달사항 :: active 된 값만 보여지게 해주세요 -->
-                            <div class="dom ">국내</div>
-                        </div>
-                    </div>
-                    <div id="timeline">
-                        <div class="timeline__inner">
-                            <div class="timeline-list">
-                                <div class="timeline-box">
-                                    <div class="year"><p>2021</p></div>
-                                    <div class="timeline-content__wrap">
-
-
-                                        <div class="timeline-content">
-
-                                            <div class="ovr">
-                                                <!-- 전달사항 :: 해외의 경우 class="ovr" 국내의 경우 class="dom" 입니다. -->
-                                                <div class="date">09.01</div>
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="timeline-item">
-                                                    <div class="timeline-item__inner d-flex">
-                                                        <!-- <div class="thumb-img">
-                                                            <img src="./resource/images/sub/img-thumb01.png" alt="">
-                                                        </div> -->
-                                                        <div class="timeline-item__cont">
-                                                            
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit">
-                                                                        <a href="#tab01">WHO 대기질
-                                                                            기준 강화 (전 세계)</a>
-                                                                        <!-- 제목 클릭시 개요로 이동 -->
-                                                                    </p>
-                                                                    <div class="cont">
-                                                                        <div class="view-cont">
-                                                                            <div>
-                                                                                <p class="font-weight__m">PM2.5(㎍/㎥)</p>
-                                                                                - 연평균 : 5 ㎍/㎥<br>
-                                                                                - 일평균 : 15 ㎍/㎥ 
-                                                                            </div>
-                                                                            <div>
-                                                                                <p class="font-weight__m">PM10(㎍/㎥)</p>
-                                                                                - 연평균 : 15 ㎍/㎥<br>
-                                                                                - 일평균 : 45 ㎍/㎥
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="nodata" style="display: none;">
-                                                <!-- 국내 데이터 없을 경우 -->
-                                                <div class="dom">
-                                                    <div class="d-flex flex-column text-center">
-                                                        <div class="img-wrap">
-                                                            <img src="./resource/images/sub/icon-caution.png" alt="">
-                                                        </div>
-                                                        <p>[정부 정책]과 관련된 <span class="keyword">국내 시계열</span> 데이터가 없습니다.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <!-- // 국내 데이터 없을 경우 -->
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-content">
-                                            <div class="nodata" style="display: none;">
-                                                <!-- 해외 데이터 없을 경우 -->
-                                                <div class="ovr">
-                                                    <div class="d-flex flex-column text-center">
-                                                        <div class="img-wrap">
-                                                            <img src="./resource/images/sub/icon-caution.png" alt="">
-                                                        </div>
-                                                        <p>[정부 정책]과 관련된 <span class="keyword">해외 시계열</span> 데이터가 없습니다.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <!-- // 해외 데이터 없을 경우 -->
-                                            </div>
-                                            <div class="dom">
-                                                <div class="date">09.01</div>
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="timeline-item">
-                                                    <div class="d-flex timeline-item__inner">
-                                                        <div class="thumb-img">
-                                                            <img src="./resource/images/sub/img-thumb01.png" alt="">
-                                                        </div>
-                                                        <div class="timeline-item__cont">
-                                                            
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">제1차 항만지역
-                                                                            등 대기질 개선 종합계획
-                                                                            (2021-2025)</a></p>
-                                                                    <div class="cont"></div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-content">
-                                            <div class="dom">
-                                                <div class="date">09.01</div>
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="timeline-item">
-                                                    <div class="d-flex timeline-item__inner">
-                                                        <div class="timeline-item__cont">
-                                                            
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">제1차 항만지역
-                                                                            등 대기질 개선 종합계획
-                                                                            (2021-2025)</a></p>
-                                                                    <div class="cont"></div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-box">
-                                    <div class="year"><p>2020</p></div>
-                                    <div class="timeline-content__wrap">
-                                        <div class="timeline-content">
-                                            <div class="ovr">
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="date">09.01</div>
-                                                <div class="timeline-item">
-                                                    <div class="timeline-item__inner d-flex">
-                                                        <!-- <div class="thumb-img">
-                                                            <img src="./resource/images/sub/img-thumb01.png" alt="">
-                                                        </div> -->
-                                                        <div class="timeline-item__cont">
-                                                            
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">WHO 대기질
-                                                                            기준 강화 (전 세계)</a></p>
-                                                                    <div class="cont">
-                                                                        <div class="table-wrap ver text-center">
-                                                                            <table>
-                                                                                <colgroup>
-                                                                                    <col style="width: auto;">
-                                                                                    <col style="width: 155px;">
-                                                                                    <col style="width: 155px;">
-                                                                                </colgroup>
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <th rowspan="2">PM2.5</th>
-                                                                                        <td>연평균</td>
-                                                                                        <td>15 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>일평균</td>
-                                                                                        <td>45 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <th rowspan="2">PM10</th>
-                                                                                        <td>연평균</td>
-                                                                                        <td>5 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>일평균</td>
-                                                                                        <td>15 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <div class="dom">
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="date">09.01</div>
-                                                <div class="timeline-item">
-                                                    <div class="d-flex timeline-item__inner">
-                                                        <div class="thumb-img">
-                                                            <img src="./resource/images/sub/img-thumb01.png" alt="">
-                                                        </div>
-                                                        <div class="timeline-item__cont">
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">제1차 항만지역
-                                                                            등 대기질 개선 종합계획
-                                                                            (2021-2025)</a></p>
-                                                                    <div class="cont"></div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <div class="dom">
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="date">09.01</div>
-                                                <div class="timeline-item">
-                                                    <div class="d-flex timeline-item__inner">
-                                                        <div class="timeline-item__cont">
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">제1차 항만지역
-                                                                            등 대기질 개선 종합계획
-                                                                            (2021-2025)</a></p>
-                                                                    <div class="cont"></div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline-box">
-                                    <div class="year"><p>2020</p></div>
-                                    <div class="timeline-content__wrap">
-                                        <div class="timeline-content">
-                                            <div class="ovr">
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="date">09.01</div>
-                                                <div class="timeline-item">
-                                                    <div class="timeline-item__inner d-flex">
-                                                        <div class="timeline-item__cont">
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">WHO 대기질
-                                                                            기준 강화 (전 세계)</a></p>
-                                                                    <div class="cont">
-                                                                        <div class="table-wrap ver text-center">
-                                                                            <table>
-                                                                                <colgroup>
-                                                                                    <col style="width: auto;">
-                                                                                    <col style="width: 155px;">
-                                                                                    <col style="width: 155px;">
-                                                                                </colgroup>
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <th rowspan="2">PM2.5</th>
-                                                                                        <td>연평균</td>
-                                                                                        <td>15 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>일평균</td>
-                                                                                        <td>45 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <th rowspan="2">PM10</th>
-                                                                                        <td>연평균</td>
-                                                                                        <td>5 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>일평균</td>
-                                                                                        <td>15 ㎕/㎥</td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <div class="dom">
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="date">09.01</div>
-                                                <div class="timeline-item">
-                                                    <div class="d-flex timeline-item__inner">
-                                                        <div class="thumb-img">
-                                                            <img src="./resource/images/sub/img-thumb01.png" alt="">
-                                                        </div>
-                                                        <div class="timeline-item__cont">
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">제1차 항만지역
-                                                                            등 대기질 개선 종합계획
-                                                                            (2021-2025)</a></p>
-                                                                    <div class="cont"></div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <div class="dom">
-                                                <p class="cateTit">대기질 및 예보 기준</p>
-                                                <div class="date">09.01</div>
-                                                <div class="timeline-item">
-                                                    <div class="d-flex timeline-item__inner">
-                                                        <div class="timeline-item__cont">
-                                                            <div class="cont-core">
-                                                                <div>
-                                                                    <p class="tit"><a href="javascript:void(0)">제1차 항만지역
-                                                                            등 대기질 개선 종합계획
-                                                                            (2021-2025)</a></p>
-                                                                    <div class="cont"></div>
-                                                                    <div class="button-wrap">
-                                                                        <button type="button">개요 <span></span></button>
-                                                                        <button type="button">연혁 <span>3</span></button>
-                                                                        <button type="button">보도자료
-                                                                            <span>10</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                        <button type="button">근거법령
-                                                                            <span>5</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-button__bottom">
+                    <div class="content-left">
+                        <div class="btnRightSwitch">
                             <button type="button"></button>
                         </div>
+                        <nav class="navbar navbar-expand-md search-bar mb-0 p-0">
+                            <p class="navbar-brand ng-binding totalCount no-padding mb-0" href="#">정부 정책 시계열 데이터 : <strong
+                                    id="totalCount">8</strong></p>
+                            <div class="collapse navbar-collapse search show" id="">
+                                <div class="d-flex ml-auto">
+                                    <div class="form-select w-215">
+                                        <select id=" " name="" class="select nav-link">
+                                            <option value="">전체 카테고리</option>
+                                            <option value="">제목</option>
+                                            <option value="">내용</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-select w-145">
+                                        <select id="" name="" class="select nav-link">
+                                            <option value="">연도별</option>
+                                            <option value="">2022년</option>
+                                            <option value="">2021년</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-select w-145">
+                                        <select id="" name="" class="select nav-link">
+                                            <option value="">최신순</option>
+                                            <option value="">과거순</option>
+                                        </select>
+                                    </div>
+                                    <div class="button-wrap">
+                                        <button type="button" class="button-excel"><img
+                                                src="./resource/images/sub/icon-excel.png" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="category">
+                            <div class="category__inner d-flex">
+                                <div class="ovr active">해외</div> <!-- 전달사항 :: active 된 값만 보여지게 해주세요 -->
+                                <div class="dom ">국내</div>
+                            </div>
+                        </div>
+                        <div id="timeline">
+                            <div class="timeline__inner">
+                                <div class="timeline-list">
+                                    <div class="timeline-box">
+                                        <div class="year"><p>2021</p></div>
+                                        <div class="timeline-content__wrap">
+                                            <div class="timeline-content">
+                                                <div class="ovr">
+                                                    <!-- 전달사항 :: 해외의 경우 class="ovr" 국내의 경우 class="dom" 입니다. -->
+                                                    <div class="date">09.01</div>
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item__inner d-flex">
+                                                            <!-- <div class="thumb-img">
+                                                                <img src="./resource/images/sub/img-thumb01.png" alt="">
+                                                            </div> -->
+                                                            <div class="timeline-item__cont">
+                    
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit">
+                                                                            <a href="#tab01">WHO 대기질
+                                                                                기준 강화 (전 세계)</a>
+                                                                            <!-- 제목 클릭시 개요로 이동 -->
+                                                                        </p>
+                                                                        <div class="cont">
+                                                                            <div class="view-cont">
+                                                                                <div>
+                                                                                    <p class="font-weight__m">PM2.5(㎍/㎥)</p>
+                                                                                    - 연평균 : 5 ㎍/㎥<br>
+                                                                                    - 일평균 : 15 ㎍/㎥
+                                                                                </div>
+                                                                                <div>
+                                                                                    <p class="font-weight__m">PM10(㎍/㎥)</p>
+                                                                                    - 연평균 : 15 ㎍/㎥<br>
+                                                                                    - 일평균 : 45 ㎍/㎥
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="nodata" style="display: none;">
+                                                    <!-- 국내 데이터 없을 경우 -->
+                                                    <div class="dom">
+                                                        <div class="d-flex flex-column text-center">
+                                                            <div class="img-wrap">
+                                                                <img src="./resource/images/sub/icon-caution.png" alt="">
+                                                            </div>
+                                                            <p>[정부 정책]과 관련된 <span class="keyword">국내 시계열</span> 데이터가 없습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // 국내 데이터 없을 경우 -->
+                                                </div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <div class="nodata" style="display: none;">
+                                                    <!-- 해외 데이터 없을 경우 -->
+                                                    <div class="ovr">
+                                                        <div class="d-flex flex-column text-center">
+                                                            <div class="img-wrap">
+                                                                <img src="./resource/images/sub/icon-caution.png" alt="">
+                                                            </div>
+                                                            <p>[정부 정책]과 관련된 <span class="keyword">해외 시계열</span> 데이터가 없습니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // 해외 데이터 없을 경우 -->
+                                                </div>
+                                                <div class="dom">
+                                                    <div class="date">09.01</div>
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="timeline-item">
+                                                        <div class="d-flex timeline-item__inner">
+                                                            <div class="thumb-img">
+                                                                <img src="./resource/images/sub/img-thumb01.png" alt="">
+                                                            </div>
+                                                            <div class="timeline-item__cont">
+                    
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">제1차 항만지역
+                                                                                등 대기질 개선 종합계획
+                                                                                (2021-2025)</a></p>
+                                                                        <div class="cont"></div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <div class="dom">
+                                                    <div class="date">09.01</div>
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="timeline-item">
+                                                        <div class="d-flex timeline-item__inner">
+                                                            <div class="timeline-item__cont">
+                    
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">제1차 항만지역
+                                                                                등 대기질 개선 종합계획
+                                                                                (2021-2025)</a></p>
+                                                                        <div class="cont"></div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-box">
+                                        <div class="year"><p>2020</p></div>
+                                        <div class="timeline-content__wrap">
+                                            <div class="timeline-content">
+                                                <div class="ovr">
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="date">09.01</div>
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item__inner d-flex">
+                                                            <!-- <div class="thumb-img">
+                                                                <img src="./resource/images/sub/img-thumb01.png" alt="">
+                                                            </div> -->
+                                                            <div class="timeline-item__cont">
+                    
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">WHO 대기질
+                                                                                기준 강화 (전 세계)</a></p>
+                                                                        <div class="cont">
+                                                                            <div class="table-wrap ver text-center">
+                                                                                <table>
+                                                                                    <colgroup>
+                                                                                        <col style="width: auto;">
+                                                                                        <col style="width: 155px;">
+                                                                                        <col style="width: 155px;">
+                                                                                    </colgroup>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <th rowspan="2">PM2.5</th>
+                                                                                            <td>연평균</td>
+                                                                                            <td>15 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>일평균</td>
+                                                                                            <td>45 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <th rowspan="2">PM10</th>
+                                                                                            <td>연평균</td>
+                                                                                            <td>5 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>일평균</td>
+                                                                                            <td>15 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <div class="dom">
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="date">09.01</div>
+                                                    <div class="timeline-item">
+                                                        <div class="d-flex timeline-item__inner">
+                                                            <div class="thumb-img">
+                                                                <img src="./resource/images/sub/img-thumb01.png" alt="">
+                                                            </div>
+                                                            <div class="timeline-item__cont">
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">제1차 항만지역
+                                                                                등 대기질 개선 종합계획
+                                                                                (2021-2025)</a></p>
+                                                                        <div class="cont"></div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <div class="dom">
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="date">09.01</div>
+                                                    <div class="timeline-item">
+                                                        <div class="d-flex timeline-item__inner">
+                                                            <div class="timeline-item__cont">
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">제1차 항만지역
+                                                                                등 대기질 개선 종합계획
+                                                                                (2021-2025)</a></p>
+                                                                        <div class="cont"></div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-box">
+                                        <div class="year"><p>2020</p></div>
+                                        <div class="timeline-content__wrap">
+                                            <div class="timeline-content">
+                                                <div class="ovr">
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="date">09.01</div>
+                                                    <div class="timeline-item">
+                                                        <div class="timeline-item__inner d-flex">
+                                                            <div class="timeline-item__cont">
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">WHO 대기질
+                                                                                기준 강화 (전 세계)</a></p>
+                                                                        <div class="cont">
+                                                                            <div class="table-wrap ver text-center">
+                                                                                <table>
+                                                                                    <colgroup>
+                                                                                        <col style="width: auto;">
+                                                                                        <col style="width: 155px;">
+                                                                                        <col style="width: 155px;">
+                                                                                    </colgroup>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <th rowspan="2">PM2.5</th>
+                                                                                            <td>연평균</td>
+                                                                                            <td>15 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>일평균</td>
+                                                                                            <td>45 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <th rowspan="2">PM10</th>
+                                                                                            <td>연평균</td>
+                                                                                            <td>5 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>일평균</td>
+                                                                                            <td>15 ㎕/㎥</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <div class="dom">
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="date">09.01</div>
+                                                    <div class="timeline-item">
+                                                        <div class="d-flex timeline-item__inner">
+                                                            <div class="thumb-img">
+                                                                <img src="./resource/images/sub/img-thumb01.png" alt="">
+                                                            </div>
+                                                            <div class="timeline-item__cont">
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">제1차 항만지역
+                                                                                등 대기질 개선 종합계획
+                                                                                (2021-2025)</a></p>
+                                                                        <div class="cont"></div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <div class="dom">
+                                                    <p class="cateTit">대기질 및 예보 기준</p>
+                                                    <div class="date">09.01</div>
+                                                    <div class="timeline-item">
+                                                        <div class="d-flex timeline-item__inner">
+                                                            <div class="timeline-item__cont">
+                                                                <div class="cont-core">
+                                                                    <div>
+                                                                        <p class="tit"><a href="javascript:void(0)">제1차 항만지역
+                                                                                등 대기질 개선 종합계획
+                                                                                (2021-2025)</a></p>
+                                                                        <div class="cont"></div>
+                                                                        <div class="button-wrap">
+                                                                            <button type="button">개요 <span></span></button>
+                                                                            <button type="button">연혁 <span>3</span></button>
+                                                                            <button type="button">보도자료
+                                                                                <span>10</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                            <button type="button">근거법령
+                                                                                <span>5</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-button__bottom">
+                                <button type="button"></button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="content-right">
-                    <p class="cateTit ovr">대기질 및 예보 기준</p><!-- 전달사항 :: 해외의 경우 class="ovr" 국내의 경우 class="dom" 입니다. -->
-                    <div class="tit-wrap d-flex align-items-center justify-content-between">
-                        <p class="tit">푸른 하늘의 날 국가기념일(9.7) 지정</p>
-                        <p class="date">2021.01.19</p>
-                    </div>
-                    <div class="tabs">
-                        <div class="tab-button-outer">
-                            <ul id="tab-button">
-                                <li><a href="#tab01">개요</a></li>
-                                <li><a href="#tab02">연혁</a></li>
-                                <li><a href="#tab03">보도자료</a></li>
-                                <li><a href="#tab04">근거법령</a></li>
-                                <li><a href="#tab05">이슈분석</a></li>
-                                <li><a href="#tab06">정책동향</a></li>
-                                <li><a href="#tab07">심층분석</a></li>
-                            </ul>
+                    <div class="content-right">
+                        <p class="cateTit ovr">대기질 및 예보 기준</p><!-- 전달사항 :: 해외의 경우 class="ovr" 국내의 경우 class="dom" 입니다. -->
+                        <div class="tit-wrap d-flex align-items-center justify-content-between">
+                            <p class="tit">푸른 하늘의 날 국가기념일(9.7) 지정</p>
+                            <p class="date">2021.01.19</p>
                         </div>
-                        <div class="tab-select-outer">
-                            <select id="tab-select">
-                                <option value="#tab01">개요</option>
-                                <option value="#tab02">연혁</option>
-                                <option value="#tab03">보도자료</option>
-                                <option value="#tab04">근거법령</option>
-                                <option value="#tab05">이슈분석</option>
-                                <option value="#tab06">정책동향</option>
-                                <option value="#tab07">심층분석</option>
-                            </select>
-                        </div>
-
-                        <!-- 개요 -->
-                        <div id="tab01" class="tab-contents">
-                            <div class="board-view-wrap">
-                                <div class="board-view-header">
-                                    <h5 class="mt-0">푸른 하늘을 위한 세계 청정 대기의 날</h5>
-                                </div>
-                                <div class="board-view-cont">
-                                    <div class="board-view-txt">
-                                        <p><img src="./resource/images/sub/timelineViewImg01.png" alt=""
-                                                style="display: block; margin: 0 auto;"></p>
-                                        <p style="font-size:1.4rem; text-align: center;">푸른 하늘의 모습</p>
-                                        <br>
-                                        <p>결의 채택에 따라 국제사회는 2020년부터 매년 9월 7일에 '푸른 하늘을 위한 세계 청정 대기의 날'을
-                                            기념하게 되며, 환경 분야 유엔 전문기구인 '유엔환경계획(UNEP)'이 이행 기구 역할을 맡게 된다. <br><br>
-
-                                            결의는 전문에서 “대기오염이 인간의 건강에 중대한 환경적 위험 요소이자 전 세계적으로 사망 및 질병을
-                                            야기하는 주요한 요인 중 하나임을 유념했다.</p>
-                                    </div>
-                                </div>
-                                <div class="board-view-file">
-                                    <a href="/storage/storage_fileDown/과기대전 포스터.pdf/20211215000000000005">
-                                        푸른 하늘의 날 국가기념일.hwp
-                                    </a>
-                                </div>
-                                <div class="board-view-link">
-                                    <p>외부링크 : </p>
-                                    <div>
-                                        <a
-                                            href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/kist_web/main/</a>
-                                        <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/</a>
-                                    </div>
-                                </div>
+                        <div class="tabs">
+                            <div class="tab-button-outer">
+                                <ul id="tab-button">
+                                    <li><a href="#tab01">개요</a></li>
+                                    <li><a href="#tab02">연혁</a></li>
+                                    <li><a href="#tab03">보도자료</a></li>
+                                    <li><a href="#tab04">근거법령</a></li>
+                                    <li><a href="#tab05">이슈분석</a></li>
+                                    <li><a href="#tab06">정책동향</a></li>
+                                    <li><a href="#tab07">심층분석</a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <!-- 연혁 -->
-                        <div id="tab02" class="tab-contents">
-                            <div class="history-box">
-                                <p class="tab-title">2021년</p>
-                                <div class="view-cont">
-                                    <div>
-                                        <p class="font-weight__m">PM2.5(㎍/㎥)</p>
-                                        - 연평균 : 5 ㎍/㎥<br>
-                                        - 일평균 : 15 ㎍/㎥ 
-                                    </div>
-                                    <div>
-                                        <p class="font-weight__m">PM10(㎍/㎥)</p>
-                                        - 연평균 : 15 ㎍/㎥<br>
-                                        - 일평균 : 45 ㎍/㎥
-                                    </div>
-                                </div>
+                            <div class="tab-select-outer">
+                                <select id="tab-select">
+                                    <option value="#tab01">개요</option>
+                                    <option value="#tab02">연혁</option>
+                                    <option value="#tab03">보도자료</option>
+                                    <option value="#tab04">근거법령</option>
+                                    <option value="#tab05">이슈분석</option>
+                                    <option value="#tab06">정책동향</option>
+                                    <option value="#tab07">심층분석</option>
+                                </select>
                             </div>
-                            <div class="history-box">
-                                <p class="tab-title">2020년</p>
-                                <div class="view-cont">
-                                    <div>
-                                        <p class="font-weight__m">PM2.5(㎍/㎥)</p>
-                                        - 연평균 : 5 ㎍/㎥<br>
-                                        - 일평균 : 15 ㎍/㎥ 
-                                    </div>
-                                    <div>
-                                        <p class="font-weight__m">PM10(㎍/㎥)</p>
-                                        - 연평균 : 15 ㎍/㎥<br>
-                                        - 일평균 : 45 ㎍/㎥
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="history-box">
-                                <p class="tab-title">2019년</p>
-                                <div class="view-cont">
-                                    <div>
-                                        <p class="font-weight__m">PM2.5(㎍/㎥)</p>
-                                        - 연평균 : 5 ㎍/㎥<br>
-                                        - 일평균 : 15 ㎍/㎥ 
-                                    </div>
-                                    <div>
-                                        <p class="font-weight__m">PM10(㎍/㎥)</p>
-                                        - 연평균 : 15 ㎍/㎥<br>
-                                        - 일평균 : 45 ㎍/㎥
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 보도자료 -->
-                        <div id="tab03" class="tab-contents">
-                            <div class="boardList">
-                                <div class="form-select">
-                                    <select id="" name="" class="select nav-link ml-auto">
-                                        <option value="">최신순</option>
-                                        <option value="">과거순</option>
-                                    </select>
-                                </div>
-                                <div class="tb-data table_m">
-                                    <table>
-                                        <caption>주요소식 외부자료/소식 모음 테이블</caption>
-                                        <colgroup>
-                                            <col class="num">
-                                            <col class="title">
-                                            <col class="part">
-                                            <col class="date">
-                                            <col class="link">
-                                            <col class="file">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" class="num">번호</th>
-                                                <th scope="col" class="title">제목</th>
-                                                <th scope="col" class="part">관리부처</th>
-                                                <th scope="col" class="date">보도일</th>
-                                                <th scope="col" class="link">링크</th>
-                                                <th scope="col" class="file">파일</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- 데이터 없을때 -->
-                                            <tr class="no-data" id="noData" style="display: none;">
-                                                <td colspan="6"
-                                                    style="line-height: 300px; font-weight: bold; font-size: 17px;">
-                                                    <span>데이터가 존재하지 않습니다.</span></td>
-                                            </tr>
-                                            <!-- 데이터 없을때 -->
-                                            <!-- 리스트 최대 10개 표출 -->
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <!--
-                                                        [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
-                                                        [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
-                                                     -->
-                                                    <a href="javascript:void(0)" class="title">보도자료 제목 입니다. </a>
-                                                </td>
-                                                <td class="part"><p>KIST 대기정책팀</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                                <td class="file"><a href="javascript:void(0)"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">센터자체 보도자료 제목 입니다</a>
-                                                </td>
-                                                <td class="part"><p>KIST 대기정책팀</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"></td>
-                                                <td class="file"><a href="javascript:void(0)"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">[2021 대한민국 과학기술대전] 개최 안내</a>
-                                                </td>
-                                                <td class="part"><p>KIST 대기정책팀</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                                <td class="file"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="board-bottom">
-                                    <div class="paging" id="pagination">
-                                        <a class="first" href="javascript:void(0)"></a>
-                                        <a class="prev" href="javascript:void(0)"></a>
-                                        <a class="on" href="#">1</a>
-                                        <a href="javascript:void(0)">2</a>
-                                        <a href="javascript:void(0)">3</a>
-                                        <a href="javascript:void(0)">4</a>
-                                        <a href="javascript:void(0)">5</a>
-                                        <a class="next" href="javascript:void(0)"></a>
-                                        <a class="last" href="javascript:void(0)"></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- view -->
-                            <div class="boardView" style="display:none;">
-                                <div class="board-view-header">
-                                    <h5 class="mt-0">[2021 대한민국 과학기술대전] 개최 안내</h5>
-                                    <div class="board-view__info">
-                                        <ul class="d-flex">
-                                            <li>발행기관</li>
-                                            <li>2022.02.07</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="board-view-cont">
-                                    12456
-                                </div>
-                                <div class="board-view-file">
-                                    <a href="/storage/storage_fileDown/과기대전 포스터.pdf/20211215000000000005">
-                                        푸른 하늘의 날 국가기념일.hwp
-                                    </a>
-                                </div>
-                                <div class="board-view-link">
-                                    <p>외부링크 : </p>
-                                    <div>
-                                        <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/kist_web/main/</a>
-                                        <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- //view -->
-
-                        </div>
-                        <!-- 근거법령 -->
-                        <div id="tab04" class="tab-contents">
-                            <div class="boardList">
-                                <div class="form-select">
-                                    <select id="" name="" class="select nav-link ml-auto">
-                                        <option value="">최신순</option>
-                                        <option value="">과거순</option>
-                                    </select>
-                                </div>
-                                <div class="tb-data table_m">
-                                    <table>
-                                        <caption>주요소식 외부자료/소식 모음 테이블</caption>
-                                        <colgroup>
-                                            <col class="num">
-                                            <col class="title">
-                                            <col class="date">
-                                            <col class="part">
-                                            <col class="dep">
-                                            <col class="link">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" class="num">번호</th>
-                                                <th scope="col" class="title">법령제목</th>
-                                                <th scope="col" class="date">제정일자</th>
-                                                <th scope="col" class="part">현행연혁구분</th>
-                                                <th scope="col" class="dep">소관부처</th>
-                                                <th scope="col" class="link">링크</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- 데이터 없을때 -->
-                                            <tr class="no-data" id="noData" style="display: none;">
-                                                <td colspan="6" style="line-height: 300px; font-weight: bold; font-size: 17px;">
-                                                    <span>데이터가 존재하지 않습니다.</span></td>
-                                            </tr>
-                                            <!-- 데이터 없을때 -->
-                                            <!-- 리스트 최대 10개 표출 -->
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <!--
-                                                        [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
-                                                        [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
-                                                     -->
-                                                    <a href="javascript:void(0)" class="title">법령  제목 입니다. 10 </a>
-                                                </td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="part"><p>현행연혁구분</p></td>
-                                                <td class="dep"><p>소관부처명</p></td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">법령  제목 입니다. 9</a>
-                                                </td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="part"><p>현행연혁구분</p></td>
-                                                <td class="dep"><p>소관부처명</p></td>
-                                                <td class="link"></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">법령  제목 입니다. 8</a>
-                                                </td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="part"><p>현행연혁구분</p></td>
-                                                <td class="dep"><p>소관부처명</p></td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                                
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="board-bottom">
-                                    <div class="paging" id="pagination">
-                                        <a class="first" href="javascript:void(0)"></a>
-                                        <a class="prev" href="javascript:void(0)"></a>
-                                        <a class="on" href="#">1</a>
-                                        <a href="javascript:void(0)">2</a>
-                                        <a href="javascript:void(0)">3</a>
-                                        <a href="javascript:void(0)">4</a>
-                                        <a href="javascript:void(0)">5</a>
-                                        <a class="next" href="javascript:void(0)"></a>
-                                        <a class="last" href="javascript:void(0)"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 이슈분석 -->
-                        <div id="tab05" class="tab-contents">
-                            <div class="boardList">
-                                <div class="form-select">
-                                    <select id="" name="" class="select nav-link ml-auto">
-                                        <option value="">최신순</option>
-                                        <option value="">과거순</option>
-                                    </select>
-                                </div>
-                                <div class="tb-data table_m">
-                                    <table>
-                                        <caption>주요소식 외부자료/소식 모음 테이블</caption>
-                                        <colgroup>
-                                            <col class="num">
-                                            <col class="title">
-                                            <col class="part">
-                                            <col class="date">
-                                            <col class="link">
-                                            <col class="file">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" class="num">번호</th>
-                                                <th scope="col" class="title">제목</th>
-                                                <th scope="col" class="part">발행기관</th>
-                                                <th scope="col" class="date">날짜</th>
-                                                <th scope="col" class="link">링크</th>
-                                                <th scope="col" class="file">파일</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- 데이터 없을때 -->
-                                            <tr class="no-data" id="noData" style="display: none;">
-                                                <td colspan="6" style="line-height: 300px; font-weight: bold; font-size: 17px;">
-                                                    <span>데이터가 존재하지 않습니다.</span></td>
-                                            </tr>
-                                            <!-- 데이터 없을때 -->
-                                            <!-- 리스트 최대 10개 표출 -->
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <!--
-                                                        [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
-                                                        [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
-                                                     -->
-                                                    <a href="javascript:void(0)" class="title">보도자료 제목 입니다. </a>
-                                                </td>
-                                                <td class="part"><p>발행기관명</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                                <td class="file"><a href="javascript:void(0)"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">센터자체 보도자료 제목 입니다</a>
-                                                </td>
-                                                <td class="part"><p>발행기관명</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"></td>
-                                                <td class="file"><a href="javascript:void(0)"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">[2021 대한민국 과학기술대전] 개최 안내</a>
-                                                </td>
-                                                <td class="part"><p>발행기관명</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                                <td class="file"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="board-bottom">
-                                    <div class="paging" id="pagination">
-                                        <a class="first" href="javascript:void(0)"></a>
-                                        <a class="prev" href="javascript:void(0)"></a>
-                                        <a class="on" href="#">1</a>
-                                        <a href="javascript:void(0)">2</a>
-                                        <a href="javascript:void(0)">3</a>
-                                        <a href="javascript:void(0)">4</a>
-                                        <a href="javascript:void(0)">5</a>
-                                        <a class="next" href="javascript:void(0)"></a>
-                                        <a class="last" href="javascript:void(0)"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="boardView" style="display: none;">
+                            <!-- 개요 -->
+                            <div id="tab01" class="tab-contents">
                                 <div class="board-view-wrap">
                                     <div class="board-view-header">
-                                        <h5 class="mt-0">이슈분석 제목 입니다. 이슈분석 제목 입니다.</h5>
-                                        <div class="info">
-                                            <ul class="d-flex">
-                                                <li>발행기관</li>
-                                                <li>2022.02.07</li>
-                                            </ul>
-                                        </div>
+                                        <h5 class="mt-0">푸른 하늘을 위한 세계 청정 대기의 날</h5>
                                     </div>
                                     <div class="board-view-cont">
                                         <div class="board-view-txt">
-                                            <p><img src="./resource/images/sub/timelineViewImg02.jpg" alt="" style="float: left; padding-right:25px; padding-bottom:25px;">결의는 전문에서 “대기오염이 인간의 건강에 중대한 환경적 위험 요소이자 전 세계적으로 사망 및 질병을 야기하는 주요한 요인 중 하나 임을 유념하고, 대기오염이 여성 아동 노인에 불균형적으로 영향을 미치는 점을 인지하고, 대기오염이 생태계에 미치는 부정적 영향을 우려한다.”고 지적했다. 결의 채택에 따라 국 제사회는 2020년부터 매년 9월 7일에 '푸른</p>
-                                            <p>하늘을 위한 세계 청정 대기의 날'을 기념하게 되며, 환경 분야 유엔 전문기구인 '유엔환경계획(UNEP)'이
-                                                이행 기구 역할을 맡게 된다. <br>
+                                            <p><img src="./resource/images/sub/timelineViewImg01.png" alt=""
+                                                    style="display: block; margin: 0 auto;"></p>
+                                            <p style="font-size:1.4rem; text-align: center;">푸른 하늘의 모습</p>
+                                            <br>
+                                            <p>결의 채택에 따라 국제사회는 2020년부터 매년 9월 7일에 '푸른 하늘을 위한 세계 청정 대기의 날'을
+                                                기념하게 되며, 환경 분야 유엔 전문기구인 '유엔환경계획(UNEP)'이 이행 기구 역할을 맡게 된다. <br><br>
                                                 결의는 전문에서 “대기오염이 인간의 건강에 중대한 환경적 위험 요소이자 전 세계적으로 사망 및 질병을
-                                                야기하는 대기오염이 생태계에 미치는 부정적 영향을 우려한다.”고 지적했다.</p>
+                                                야기하는 주요한 요인 중 하나임을 유념했다.</p>
                                         </div>
                                     </div>
                                     <div class="board-view-file">
@@ -1238,134 +853,517 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 정책동향 -->
-                        <div id="tab06" class="tab-contents">
-                            <div class="boardList">
-                                <div class="form-select">
-                                    <select id="" name="" class="select nav-link ml-auto">
-                                        <option value="">최신순</option>
-                                        <option value="">과거순</option>
-                                    </select>
+                            <!-- 연혁 -->
+                            <div id="tab02" class="tab-contents">
+                                <div class="history-box">
+                                    <p class="tab-title">2021년</p>
+                                    <div class="view-cont">
+                                        <div>
+                                            <p class="font-weight__m">PM2.5(㎍/㎥)</p>
+                                            - 연평균 : 5 ㎍/㎥<br>
+                                            - 일평균 : 15 ㎍/㎥
+                                        </div>
+                                        <div>
+                                            <p class="font-weight__m">PM10(㎍/㎥)</p>
+                                            - 연평균 : 15 ㎍/㎥<br>
+                                            - 일평균 : 45 ㎍/㎥
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="tb-data table_m">
-                                    <table>
-                                        <caption>주요소식 외부자료/소식 모음 테이블</caption>
-                                        <colgroup>
-                                            <col class="num">
-                                            <col class="title">
-                                            <col class="part">
-                                            <col class="date">
-                                            <col class="link">
-                                            <col class="file">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" class="num">번호</th>
-                                                <th scope="col" class="title">제목</th>
-                                                <th scope="col" class="part">기관</th>
-                                                <th scope="col" class="date">날짜</th>
-                                                <th scope="col" class="link">링크</th>
-                                                <th scope="col" class="file">파일</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- 데이터 없을때 -->
-                                            <tr class="no-data" id="noData" style="display: none;">
-                                                <td colspan="6" style="line-height: 300px; font-weight: bold; font-size: 17px;">
-                                                    <span>데이터가 존재하지 않습니다.</span></td>
-                                            </tr>
-                                            <!-- 데이터 없을때 -->
-                                            <!-- 리스트 최대 10개 표출 -->
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <!--
-                                                        [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
-                                                        [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
-                                                     -->
-                                                    <a href="javascript:void(0)" class="title">정책동향  제목 입니다.  10                         </a>
-                                                </td>
-                                                <td class="part"><p>KIST 대기정책팀</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                                <td class="file"><a href="javascript:void(0)"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">정책동향  제목 입니다.  9</a>
-                                                </td>
-                                                <td class="part"><p>KIST 대기정책팀</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"></td>
-                                                <td class="file"><a href="javascript:void(0)"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span data-idx="">13</span></td>
-                                                <td class="title ">
-                                                    <a href="javascript:void(0)" class="title">정책동향  제목 입니다.  8</a>
-                                                </td>
-                                                <td class="part"><p>KIST 대기정책팀</p></td>
-                                                <td class="date" data-date="">20-07-05</td>
-                                                <td class="link"><a href="javascript:void(0)"></a></td>
-                                                <td class="file"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="history-box">
+                                    <p class="tab-title">2020년</p>
+                                    <div class="view-cont">
+                                        <div>
+                                            <p class="font-weight__m">PM2.5(㎍/㎥)</p>
+                                            - 연평균 : 5 ㎍/㎥<br>
+                                            - 일평균 : 15 ㎍/㎥
+                                        </div>
+                                        <div>
+                                            <p class="font-weight__m">PM10(㎍/㎥)</p>
+                                            - 연평균 : 15 ㎍/㎥<br>
+                                            - 일평균 : 45 ㎍/㎥
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="board-bottom">
-                                    <div class="paging" id="pagination">
-                                        <a class="first" href="javascript:void(0)"></a>
-                                        <a class="prev" href="javascript:void(0)"></a>
-                                        <a class="on" href="#">1</a>
-                                        <a href="javascript:void(0)">2</a>
-                                        <a href="javascript:void(0)">3</a>
-                                        <a href="javascript:void(0)">4</a>
-                                        <a href="javascript:void(0)">5</a>
-                                        <a class="next" href="javascript:void(0)"></a>
-                                        <a class="last" href="javascript:void(0)"></a>
+                                <div class="history-box">
+                                    <p class="tab-title">2019년</p>
+                                    <div class="view-cont">
+                                        <div>
+                                            <p class="font-weight__m">PM2.5(㎍/㎥)</p>
+                                            - 연평균 : 5 ㎍/㎥<br>
+                                            - 일평균 : 15 ㎍/㎥
+                                        </div>
+                                        <div>
+                                            <p class="font-weight__m">PM10(㎍/㎥)</p>
+                                            - 연평균 : 15 ㎍/㎥<br>
+                                            - 일평균 : 45 ㎍/㎥
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 심층분석 -->
-                        <div id="tab07" class="tab-contents">
-                            <div class="board-view-wrap">
-                                <div class="board-view-header">
-                                    <h5 class="mt-0">맑은 공기, 숨 쉬는 항만을 위한 대기질 개선 종합계획!
-                                    </h5>
-                                </div>
-                                <div class="board-view-cont">
-                                    <div class="board-view-txt">
-                                        <p><img src="./resource/images/sub/timelineViewImg01.png" alt="" style="display: block; margin: 0 auto;" class="mCS_img_loaded"></p>
-                                        <p style="font-size:1.4rem; text-align: center;">항만 미세먼지 포스터
-                                        </p>
-                                        <p style="margin:2rem 0 1rem 0; font-size: 2rem; font-weight: 500;">공기 분석</p>   
-                                        <p> ‘맑은 공기, 숨 쉬는 항만’이라는 비전 아래 2025년까지 항만 배출 초미세먼지(PM2.5) 배출량을 60%   
-                                            감축(2017년 대비) 하는 것을 목표*로 4대 전략 아래 15개 세부과제를 추진합니다. <br>
-                                            * 항만 배출 초미세먼지(PM2.5)를 2017년 7,958톤에서 2025년 3,165톤 이하로 감축
-                                            결의 채택에 따라 국제사회는 2020년부터 매년 9월 7일에 '푸른 하늘을 위한 세계 청정 대기의 날’
-                                            을 기념하게 되며, 환경 분야 유엔 전문기구인 '유엔환경계획(UNEP)'이 이행 기구 역할을 맡게 된다. 
-                                          </p>
+                            <!-- 보도자료 -->
+                            <div id="tab03" class="tab-contents">
+                                <div class="boardList">
+                                    <div class="form-select">
+                                        <select id="" name="" class="select nav-link ml-auto">
+                                            <option value="">최신순</option>
+                                            <option value="">과거순</option>
+                                        </select>
+                                    </div>
+                                    <div class="tb-data table_m">
+                                        <table>
+                                            <caption>주요소식 외부자료/소식 모음 테이블</caption>
+                                            <colgroup>
+                                                <col class="num">
+                                                <col class="title">
+                                                <col class="part">
+                                                <col class="date">
+                                                <col class="link">
+                                                <col class="file">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="num">번호</th>
+                                                    <th scope="col" class="title">제목</th>
+                                                    <th scope="col" class="part">관리부처</th>
+                                                    <th scope="col" class="date">보도일</th>
+                                                    <th scope="col" class="link">링크</th>
+                                                    <th scope="col" class="file">파일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 데이터 없을때 -->
+                                                <tr class="no-data" id="noData" style="display: none;">
+                                                    <td colspan="6"
+                                                        style="line-height: 300px; font-weight: bold; font-size: 17px;">
+                                                        <span>데이터가 존재하지 않습니다.</span></td>
+                                                </tr>
+                                                <!-- 데이터 없을때 -->
+                                                <!-- 리스트 최대 10개 표출 -->
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <!--
+                                                            [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
+                                                            [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
+                                                         -->
+                                                        <a href="javascript:void(0)" class="title">보도자료 제목 입니다. </a>
+                                                    </td>
+                                                    <td class="part"><p>KIST 대기정책팀</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                                                    <td class="file"><a href="javascript:void(0)"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">센터자체 보도자료 제목 입니다</a>
+                                                    </td>
+                                                    <td class="part"><p>KIST 대기정책팀</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"></td>
+                                                    <td class="file"><a href="javascript:void(0)"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">[2021 대한민국 과학기술대전] 개최 안내</a>
+                                                    </td>
+                                                    <td class="part"><p>KIST 대기정책팀</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                                                    <td class="file"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="board-bottom">
+                                        <div class="paging" id="pagination">
+                                            <a class="first" href="javascript:void(0)"></a>
+                                            <a class="prev" href="javascript:void(0)"></a>
+                                            <a class="on" href="#">1</a>
+                                            <a href="javascript:void(0)">2</a>
+                                            <a href="javascript:void(0)">3</a>
+                                            <a href="javascript:void(0)">4</a>
+                                            <a href="javascript:void(0)">5</a>
+                                            <a class="next" href="javascript:void(0)"></a>
+                                            <a class="last" href="javascript:void(0)"></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- <div class="board-view-file">
-                                    <a href="/storage/storage_fileDown/과기대전 포스터.pdf/20211215000000000005">
-                                        푸른 하늘의 날 국가기념일.hwp
-                                    </a>
-                                </div>
-                                <div class="board-view-link">
-                                    <p>외부링크 : </p>
-                                    <div>
-                                        <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/kist_web/main/</a>
-                                        <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/</a>
+                                <!-- view -->
+                                <div class="boardView" style="display:none;">
+                                    <div class="board-view-header">
+                                        <h5 class="mt-0">[2021 대한민국 과학기술대전] 개최 안내</h5>
+                                        <div class="board-view__info">
+                                            <ul class="d-flex">
+                                                <li>발행기관</li>
+                                                <li>2022.02.07</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div> -->
+                                    <div class="board-view-cont">
+                                        12456
+                                    </div>
+                                    <div class="board-view-file">
+                                        <a href="/storage/storage_fileDown/과기대전 포스터.pdf/20211215000000000005">
+                                            푸른 하늘의 날 국가기념일.hwp
+                                        </a>
+                                    </div>
+                                    <div class="board-view-link">
+                                        <p>외부링크 : </p>
+                                        <div>
+                                            <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/kist_web/main/</a>
+                                            <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- //view -->
+                            </div>
+                            <!-- 근거법령 -->
+                            <div id="tab04" class="tab-contents">
+                                <div class="boardList">
+                                    <div class="form-select">
+                                        <select id="" name="" class="select nav-link ml-auto">
+                                            <option value="">최신순</option>
+                                            <option value="">과거순</option>
+                                        </select>
+                                    </div>
+                                    <div class="tb-data table_m">
+                                        <table>
+                                            <caption>주요소식 외부자료/소식 모음 테이블</caption>
+                                            <colgroup>
+                                                <col class="num">
+                                                <col class="title">
+                                                <col class="date">
+                                                <col class="part">
+                                                <col class="dep">
+                                                <col class="link">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="num">번호</th>
+                                                    <th scope="col" class="title">법령제목</th>
+                                                    <th scope="col" class="date">제정일자</th>
+                                                    <th scope="col" class="part">현행연혁구분</th>
+                                                    <th scope="col" class="dep">소관부처</th>
+                                                    <th scope="col" class="link">링크</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 데이터 없을때 -->
+                                                <tr class="no-data" id="noData" style="display: none;">
+                                                    <td colspan="6" style="line-height: 300px; font-weight: bold; font-size: 17px;">
+                                                        <span>데이터가 존재하지 않습니다.</span></td>
+                                                </tr>
+                                                <!-- 데이터 없을때 -->
+                                                <!-- 리스트 최대 10개 표출 -->
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <!--
+                                                            [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
+                                                            [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
+                                                         -->
+                                                        <a href="javascript:void(0)" class="title">법령  제목 입니다. 10 </a>
+                                                    </td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="part"><p>현행연혁구분</p></td>
+                                                    <td class="dep"><p>소관부처명</p></td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">법령  제목 입니다. 9</a>
+                                                    </td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="part"><p>현행연혁구분</p></td>
+                                                    <td class="dep"><p>소관부처명</p></td>
+                                                    <td class="link"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">법령  제목 입니다. 8</a>
+                                                    </td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="part"><p>현행연혁구분</p></td>
+                                                    <td class="dep"><p>소관부처명</p></td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="board-bottom">
+                                        <div class="paging" id="pagination">
+                                            <a class="first" href="javascript:void(0)"></a>
+                                            <a class="prev" href="javascript:void(0)"></a>
+                                            <a class="on" href="#">1</a>
+                                            <a href="javascript:void(0)">2</a>
+                                            <a href="javascript:void(0)">3</a>
+                                            <a href="javascript:void(0)">4</a>
+                                            <a href="javascript:void(0)">5</a>
+                                            <a class="next" href="javascript:void(0)"></a>
+                                            <a class="last" href="javascript:void(0)"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 이슈분석 -->
+                            <div id="tab05" class="tab-contents">
+                                <div class="boardList">
+                                    <div class="form-select">
+                                        <select id="" name="" class="select nav-link ml-auto">
+                                            <option value="">최신순</option>
+                                            <option value="">과거순</option>
+                                        </select>
+                                    </div>
+                                    <div class="tb-data table_m">
+                                        <table>
+                                            <caption>주요소식 외부자료/소식 모음 테이블</caption>
+                                            <colgroup>
+                                                <col class="num">
+                                                <col class="title">
+                                                <col class="part">
+                                                <col class="date">
+                                                <col class="link">
+                                                <col class="file">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="num">번호</th>
+                                                    <th scope="col" class="title">제목</th>
+                                                    <th scope="col" class="part">발행기관</th>
+                                                    <th scope="col" class="date">날짜</th>
+                                                    <th scope="col" class="link">링크</th>
+                                                    <th scope="col" class="file">파일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 데이터 없을때 -->
+                                                <tr class="no-data" id="noData" style="display: none;">
+                                                    <td colspan="6" style="line-height: 300px; font-weight: bold; font-size: 17px;">
+                                                        <span>데이터가 존재하지 않습니다.</span></td>
+                                                </tr>
+                                                <!-- 데이터 없을때 -->
+                                                <!-- 리스트 최대 10개 표출 -->
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <!--
+                                                            [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
+                                                            [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
+                                                         -->
+                                                        <a href="javascript:void(0)" class="title">보도자료 제목 입니다. </a>
+                                                    </td>
+                                                    <td class="part"><p>발행기관명</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                                                    <td class="file"><a href="javascript:void(0)"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">센터자체 보도자료 제목 입니다</a>
+                                                    </td>
+                                                    <td class="part"><p>발행기관명</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"></td>
+                                                    <td class="file"><a href="javascript:void(0)"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">[2021 대한민국 과학기술대전] 개최 안내</a>
+                                                    </td>
+                                                    <td class="part"><p>발행기관명</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                                                    <td class="file"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="board-bottom">
+                                        <div class="paging" id="pagination">
+                                            <a class="first" href="javascript:void(0)"></a>
+                                            <a class="prev" href="javascript:void(0)"></a>
+                                            <a class="on" href="#">1</a>
+                                            <a href="javascript:void(0)">2</a>
+                                            <a href="javascript:void(0)">3</a>
+                                            <a href="javascript:void(0)">4</a>
+                                            <a href="javascript:void(0)">5</a>
+                                            <a class="next" href="javascript:void(0)"></a>
+                                            <a class="last" href="javascript:void(0)"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boardView" style="display: none;">
+                                    <div class="board-view-wrap">
+                                        <div class="board-view-header">
+                                            <h5 class="mt-0">이슈분석 제목 입니다. 이슈분석 제목 입니다.</h5>
+                                            <div class="info">
+                                                <ul class="d-flex">
+                                                    <li>발행기관</li>
+                                                    <li>2022.02.07</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="board-view-cont">
+                                            <div class="board-view-txt">
+                                                <p><img src="./resource/images/sub/timelineViewImg02.jpg" alt="" style="float: left; padding-right:25px; padding-bottom:25px;">결의는 전문에서 “대기오염이 인간의 건강에 중대한 환경적 위험 요소이자 전 세계적으로 사망 및 질병을 야기하는 주요한 요인 중 하나 임을 유념하고, 대기오염이 여성 아동 노인에 불균형적으로 영향을 미치는 점을 인지하고, 대기오염이 생태계에 미치는 부정적 영향을 우려한다.”고 지적했다. 결의 채택에 따라 국 제사회는 2020년부터 매년 9월 7일에 '푸른</p>
+                                                <p>하늘을 위한 세계 청정 대기의 날'을 기념하게 되며, 환경 분야 유엔 전문기구인 '유엔환경계획(UNEP)'이
+                                                    이행 기구 역할을 맡게 된다. <br>
+                                                    결의는 전문에서 “대기오염이 인간의 건강에 중대한 환경적 위험 요소이자 전 세계적으로 사망 및 질병을
+                                                    야기하는 대기오염이 생태계에 미치는 부정적 영향을 우려한다.”고 지적했다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="board-view-file">
+                                            <a href="/storage/storage_fileDown/과기대전 포스터.pdf/20211215000000000005">
+                                                푸른 하늘의 날 국가기념일.hwp
+                                            </a>
+                                        </div>
+                                        <div class="board-view-link">
+                                            <p>외부링크 : </p>
+                                            <div>
+                                                <a
+                                                    href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/kist_web/main/</a>
+                                                <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 정책동향 -->
+                            <div id="tab06" class="tab-contents">
+                                <div class="boardList">
+                                    <div class="form-select">
+                                        <select id="" name="" class="select nav-link ml-auto">
+                                            <option value="">최신순</option>
+                                            <option value="">과거순</option>
+                                        </select>
+                                    </div>
+                                    <div class="tb-data table_m">
+                                        <table>
+                                            <caption>주요소식 외부자료/소식 모음 테이블</caption>
+                                            <colgroup>
+                                                <col class="num">
+                                                <col class="title">
+                                                <col class="part">
+                                                <col class="date">
+                                                <col class="link">
+                                                <col class="file">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="num">번호</th>
+                                                    <th scope="col" class="title">제목</th>
+                                                    <th scope="col" class="part">기관</th>
+                                                    <th scope="col" class="date">날짜</th>
+                                                    <th scope="col" class="link">링크</th>
+                                                    <th scope="col" class="file">파일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 데이터 없을때 -->
+                                                <tr class="no-data" id="noData" style="display: none;">
+                                                    <td colspan="6" style="line-height: 300px; font-weight: bold; font-size: 17px;">
+                                                        <span>데이터가 존재하지 않습니다.</span></td>
+                                                </tr>
+                                                <!-- 데이터 없을때 -->
+                                                <!-- 리스트 최대 10개 표출 -->
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <!--
+                                                            [보도자료 제목] : 클릭 시 연결된 URL로 이동(새창)
+                                                            [센터자체 보도자료 제목] : 클릭 시 상세페이지로 이동
+                                                         -->
+                                                        <a href="javascript:void(0)" class="title">정책동향  제목 입니다.  10                         </a>
+                                                    </td>
+                                                    <td class="part"><p>KIST 대기정책팀</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                                                    <td class="file"><a href="javascript:void(0)"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">정책동향  제목 입니다.  9</a>
+                                                    </td>
+                                                    <td class="part"><p>KIST 대기정책팀</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"></td>
+                                                    <td class="file"><a href="javascript:void(0)"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span data-idx="">13</span></td>
+                                                    <td class="title ">
+                                                        <a href="javascript:void(0)" class="title">정책동향  제목 입니다.  8</a>
+                                                    </td>
+                                                    <td class="part"><p>KIST 대기정책팀</p></td>
+                                                    <td class="date" data-date="">20-07-05</td>
+                                                    <td class="link"><a href="javascript:void(0)"></a></td>
+                                                    <td class="file"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="board-bottom">
+                                        <div class="paging" id="pagination">
+                                            <a class="first" href="javascript:void(0)"></a>
+                                            <a class="prev" href="javascript:void(0)"></a>
+                                            <a class="on" href="#">1</a>
+                                            <a href="javascript:void(0)">2</a>
+                                            <a href="javascript:void(0)">3</a>
+                                            <a href="javascript:void(0)">4</a>
+                                            <a href="javascript:void(0)">5</a>
+                                            <a class="next" href="javascript:void(0)"></a>
+                                            <a class="last" href="javascript:void(0)"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 심층분석 -->
+                            <div id="tab07" class="tab-contents">
+                                <div class="board-view-wrap">
+                                    <div class="board-view-header">
+                                        <h5 class="mt-0">맑은 공기, 숨 쉬는 항만을 위한 대기질 개선 종합계획!
+                                        </h5>
+                                    </div>
+                                    <div class="board-view-cont">
+                                        <div class="board-view-txt">
+                                            <p><img src="./resource/images/sub/timelineViewImg01.png" alt="" style="display: block; margin: 0 auto;" class="mCS_img_loaded"></p>
+                                            <p style="font-size:1.4rem; text-align: center;">항만 미세먼지 포스터
+                                            </p>
+                                            <p style="margin:2rem 0 1rem 0; font-size: 2rem; font-weight: 500;">공기 분석</p>
+                                            <p> ‘맑은 공기, 숨 쉬는 항만’이라는 비전 아래 2025년까지 항만 배출 초미세먼지(PM2.5) 배출량을 60%
+                                                감축(2017년 대비) 하는 것을 목표*로 4대 전략 아래 15개 세부과제를 추진합니다. <br>
+                                                * 항만 배출 초미세먼지(PM2.5)를 2017년 7,958톤에서 2025년 3,165톤 이하로 감축
+                                                결의 채택에 따라 국제사회는 2020년부터 매년 9월 7일에 '푸른 하늘을 위한 세계 청정 대기의 날’
+                                                을 기념하게 되며, 환경 분야 유엔 전문기구인 '유엔환경계획(UNEP)'이 이행 기구 역할을 맡게 된다.
+                                              </p>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="board-view-file">
+                                        <a href="/storage/storage_fileDown/과기대전 포스터.pdf/20211215000000000005">
+                                            푸른 하늘의 날 국가기념일.hwp
+                                        </a>
+                                    </div>
+                                    <div class="board-view-link">
+                                        <p>외부링크 : </p>
+                                        <div>
+                                            <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/kist_web/main/</a>
+                                            <a href="javascript:void(0)">https://www.kist.re.kr/kist_web/main/</a>
+                                        </div>
+                                    </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -1398,12 +1396,13 @@
 <script>
     $(function () {
 
-        $(".timeline__inner").mCustomScrollbar({
-            theme: "minimal-dark",
-            mouseWheel: {
-                scrollAmount: 400
-            },
-        });
+        // $(".timeline__inner").mCustomScrollbar({
+        //     theme: "minimal-dark",
+        //     mouseWheel: {
+        //         scrollAmount: 400
+        //     },
+    
+        // });
 
         $(".tab-contents").mCustomScrollbar({
             theme: "minimal-dark",
