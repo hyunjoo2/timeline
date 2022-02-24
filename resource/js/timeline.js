@@ -58,15 +58,22 @@ function buttonClick() {
 		$(".content-right").removeClass("step1");
 		$(this).parents().find('.timeline-content').children().find(".timeline-item").removeClass("on");
 
+		
 		var timeItem = $(this).parents().closest('.timeline-content').children();
 		$(timeItem).addClass("on");
 
-		if ($(timeItem).hasClass("on")) {
-			$(timeItem).parents().closest('.timeline-content').mCustomScrollbar('scrollTo', 
-			$(this).parents().find('.timeline__inner').position().top, {scrollInertia: 700})
-		}else{
-
-		}
+		//scoll top 조정
+		// $(".timeline__inner").mCustomScrollbar({
+		// 	callbacks:{
+		// 		onOverflowYNone:function(){
+		// 			$(".timeline__inner").children().find(".mCSB_container").addClass("vcenter");
+		// 		},
+		// 		onOverflowY:function(){
+		// 			$(".timeline__inner").children().find(".mCSB_container").removeClass("vcenter");
+		// 			$(".timeline__inner").mCustomScrollbar("scrollTo","top",{scrollInertia:0,timeout:0,callbacks:false});
+		// 		}
+		// 	}
+		// });
 
 	
 

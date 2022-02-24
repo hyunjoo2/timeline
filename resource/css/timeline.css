@@ -85,6 +85,11 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 .nodata .ovr .keyword{color:#006db2}
 .nodata .dom .keyword{color:#00a0a2}
 
+.vcenter { 
+  top: 50% !important; 
+  transform: translateY(-50%); 
+}
+
 
 
 /*  */
