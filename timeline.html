@@ -19,17 +19,14 @@
     <link rel="stylesheet" href="./resource/css/timeline.css">
 
 
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
 
     <script src="./resource/js/jquery-3.5.1.min.js"></script>
     <script src="./resource/js/bootstrap.min.js"></script>
     <script src="./resource/js/swiper.min.js"></script>
 
-    <script src="./resource/js/main.js"></script>
-    <script src="./resource/js/common.js"></script>
     <script src="./resource/js/sub.js"></script>
 
-    <script src="./resource/js/TweenMax.min.js"></script>
 
 
 
@@ -40,15 +37,15 @@
     <!-- notify -->
 
 
-    <script src="./resource/js/hamMenu.js"></script>
 
 
-    <script src="./resource/js/timeline.js"></script>
+    
 
 
     <!-- timeline -->
 
     <script src="./resource/js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="./resource/js/timeline.js"></script>
 
 </head>
 
@@ -329,12 +326,18 @@
         <section class="clearfix container timelinePage sub_content" id="content">
             <div class="content_wrap w-100">
                 <div class="page-header sub">
-					<h1 class="text-center pb-5 mb-0">공지사항</h1>
+					<h1 class="text-center pb-5 mb-0">시계열 서비스</h1>
 				</div>
                 <div class="content-timeline">
+
                     <div class="btnRightSwitch mobile">
                         <button type="button"><i></i> 시계열 화면으로 돌아가기</button>
                     </div>
+
+                    
+
+
+
                     <div class="content-left">
                         <div class="btnRightSwitch">
                             <button type="button"></button>
@@ -344,25 +347,27 @@
                                     id="totalCount">8</strong></p>
                             <div class="collapse navbar-collapse search show" id="">
                                 <div class="d-flex ml-auto">
-                                    <div class="form-select w-215">
+                                    <div class="form-select w-215 categoryAll">
                                         <select id=" " name="" class="select nav-link">
                                             <option value="">전체 카테고리</option>
                                             <option value="">제목</option>
                                             <option value="">내용</option>
                                         </select>
                                     </div>
-                                    <div class="form-select w-145">
-                                        <select id="" name="" class="select nav-link">
-                                            <option value="">연도별</option>
-                                            <option value="">2022년</option>
-                                            <option value="">2021년</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-select w-145">
-                                        <select id="" name="" class="select nav-link">
-                                            <option value="">최신순</option>
-                                            <option value="">과거순</option>
-                                        </select>
+                                    <div class="d-flex categoryDetail">
+                                        <div class="form-select w-145">
+                                            <select id="" name="" class="select nav-link">
+                                                <option value="">연도별</option>
+                                                <option value="">2022년</option>
+                                                <option value="">2021년</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-select w-145">
+                                            <select id="" name="" class="select nav-link">
+                                                <option value="">최신순</option>
+                                                <option value="">과거순</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="button-wrap">
                                         <button type="button" class="button-excel"><img
@@ -398,7 +403,7 @@
                                                                 <div class="cont-core">
                                                                     <div>
                                                                         <p class="tit">
-                                                                            <a href="#tab01">WHO 대기질
+                                                                            <a href="javascript:void(0)">WHO 대기질
                                                                                 기준 강화 (전 세계)</a>
                                                                             <!-- 제목 클릭시 개요로 이동 -->
                                                                         </p>
@@ -792,6 +797,21 @@
                         </div>
                     </div>
                     <div class="content-right">
+
+                        <div class="breadMobile">
+                            <ul>
+                                <li>국내</li>
+                                <li>정부 정책</li>
+                                <li>보도자료</li>
+                            </ul>
+                        </div>
+
+                        <div class="timelineListMobile">
+                            <select name="" id="">
+                                <option value="">제1차 항만지역 등 대기질 개선 종합계획 (2021-2025)</option>
+                            </select>
+                        </div>
+
                         <p class="cateTit ovr">대기질 및 예보 기준</p><!-- 전달사항 :: 해외의 경우 class="ovr" 국내의 경우 class="dom" 입니다. -->
                         <div class="tit-wrap d-flex align-items-center justify-content-between">
                             <p class="tit">푸른 하늘의 날 국가기념일(9.7) 지정</p>
@@ -809,7 +829,7 @@
                                     <li><a href="#tab07">심층분석</a></li>
                                 </ul>
                             </div>
-                            <div class="tab-select-outer">
+                            <!-- <div class="tab-select-outer">
                                 <select id="tab-select">
                                     <option value="#tab01">개요</option>
                                     <option value="#tab02">연혁</option>
@@ -819,7 +839,7 @@
                                     <option value="#tab06">정책동향</option>
                                     <option value="#tab07">심층분석</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <!-- 개요 -->
                             <div id="tab01" class="tab-contents">
                                 <div class="board-view-wrap">
@@ -1404,30 +1424,20 @@
     
         // });
 
-        $(".tab-contents").mCustomScrollbar({
-            theme: "minimal-dark",
-            mouseWheel: {
-                scrollAmount: 400
-            },
-            callbacks:{
-                onInit:function() {
-                    $('.content-right').mCustomScrollbar('scrollTo', 0);
-                }
-            }
-        });
+        // $(".tab-contents").mCustomScrollbar({
+        //     theme: "minimal-dark",
+        //     mouseWheel: {
+        //         scrollAmount: 400
+        //     },
+        //     callbacks:{
+        //         onInit:function() {
+        //             $('.content-right').mCustomScrollbar('scrollTo', 0);
+        //         }
+        //     }
+        // });
 
 
-        $('.timeline-button__bottom button').on('click', function () {
-            // $('.timeline__inner').mCustomScrollbar("update");
-
-            $('.timeline__inner').mCustomScrollbar("scrollTo", "bottom", {
-                setTop: "-999999px",
-                scrollInertia: 1000,
-
-            });
-
-
-        });
+        
 
         // 보도자료 제목 클릭시 view 페이지로 넘어감
         // $(".boardList .title").click(function(){
