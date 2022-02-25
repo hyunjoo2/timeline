@@ -15,16 +15,18 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 .w-215 select{width:215px;}
 
 
-.timelinePage{margin-bottom: -100px;}
-.timeline__inner{height:calc(100vh - 210px);}
+.content-timeline{min-height: calc(100vh - 210px) !important; }
+/* .timelinePage{margin-bottom: -100px;} */
+.timeline__inner{/* height:calc(100vh - 210px); */ height: 100%;}
 
 .category__inner{margin: 20px -2px 0 -2px;}
 .category__inner >div {flex:1;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height:65px; margin: 0 2px; font-size:20px; font-weight:bold; }
 .category__inner >div.ovr{background:#fdd7d4;}
 .category__inner >div.dom{background:#c4e2fd;}
 
+#timeline{height:100%; }
 
-.timeline-list{ position:relative; margin-top:-10px; margin-bottom: 100px; padding-bottom: 30px; }
+.timeline-list{ position:relative; margin-top:-10px; margin-bottom: 100px; padding-bottom: 10rem; }
 .timeline-list::before{position:absolute; top:0; left:50%;  width: 1px; height: 100%; background: #cccccc; content:""; z-index: 0;}
 .timeline-list::after{position:absolute; top:auto; left:calc(50% - 0.55rem); bottom:0;  width: 1.1rem; height: 1.1rem; background: #cccccc; content:""; z-index: 0; border-radius: 100%;}
 .timeline-box .year{position:relative; z-index: 1; margin-top: 6rem; margin-bottom: 6rem; padding-bottom: 2rem;  text-align: center; background: #ffffff;line-height: 100%; font-size:5.5rem; }
@@ -132,8 +134,8 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 .step2 .search .w-145 select{width: 10.5rem;}
 /* .step2 .search select{width:100%} */
 .step2 .search>div{justify-content: space-between; width:100%; margin-left: 0 !important;}
-.step2 #timeline{height:calc(100% - 15.4rem);}
-.step2 .timeline__inner{ height:100%;  padding-right:4rem;}
+/* .step2 #timeline{height:calc(100% - 15.4rem);} */
+.step2 .timeline__inner{ /* height:100%; */  padding-right:4rem;}
 .step2 .timeline__inner .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{margin-right: 0;}
 .step2 .category__inner{ padding-right: 4rem;}
 .step2 .category__inner>div{height: 5rem; font-size:1.8rem; cursor: pointer; background: #dddddd;}
@@ -262,6 +264,9 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 .breadMobile, .timelineListMobile{display: none;}
 
 
+/* left 가운데 위치 */
+/* .content-left.step2 .mCSB_container{transform: translateY(-64%);} */
+
 
 /*======================================================================================
 ====================================== responsive ======================================
@@ -272,7 +277,7 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 @media screen and (min-width: 720px) {
   .tab-button-outer { display: block; }
   .tab-select-outer { display: none;  }
-  .timelinePage{margin-bottom: -50px;}
+  /* .timelinePage{margin-bottom: -50px;} */
 }
 
 @media all and (max-width: 1200px){
