@@ -12,13 +12,7 @@ $(function () {
 
 var timer = null;
 $(window).on('resize', function() {
-	var windowHeight = $(window).height();
-	$(".content-timeline").css({
-		height: windowHeight + 50
-	});
 	
-	clearTimeout(timer);
-	timer = setTimeout(fnPageResize, 300);
 });
 
 $(document).ready(function() {
@@ -31,12 +25,19 @@ $(document).ready(function() {
 	
 	// $('[data-toggle="tooltip"]').tooltip();
 	
+	// var windowHeight = $(window).height();
+	// $('.content-timeline').css({
+	// 	height: windowHeight + 50
+	// });
 	var windowHeight = $(window).height();
-	$('.content-timeline').css({
+	$("#timeline").css({
 		height: windowHeight + 50
 	});
+	
+	clearTimeout(timer);
+	timer = setTimeout(fnPageResize, 300);
 
-	$('#timeline').mCustomScrollbar({
+	$('.timeline__inner').mCustomScrollbar({
 		theme: 'minimal-dark',
 		mouseWheel: {
 			scrollAmount: 400
@@ -44,22 +45,22 @@ $(document).ready(function() {
 		//scrollInertia : 400,                        
 		callbacks: {
 			onInit: function () {
-				$('#timeline').mCustomScrollbar('scrollTo', 0);
+				$('.timeline__inner').mCustomScrollbar('scrollTo', 0);
 			}
 		},
 		alwaysTriggerOffsets: false
 	});
-	$(".tab-contents").mCustomScrollbar({
-		theme: "minimal-dark",
-		mouseWheel: {
-			scrollAmount: 400
-		},
-		callbacks: {
-			onInit: function () {
-				$('.content-right').mCustomScrollbar('scrollTo', 0);
-			}
-		}
-	});
+	// $(".tab-contents").mCustomScrollbar({
+	// 	theme: "minimal-dark",
+	// 	mouseWheel: {
+	// 		scrollAmount: 400
+	// 	},
+	// 	callbacks: {
+	// 		onInit: function () {
+	// 			$('.content-right').mCustomScrollbar('scrollTo', 0);
+	// 		}
+	// 	}
+	// });
 	
 // 	$(".left_wrap .scroll_area").mCustomScrollbar({
 // 		theme: "minimal-dark",
@@ -334,19 +335,19 @@ function fnPageResize() {
 		$('.timeline__inner').mCustomScrollbar('destroy');
 		$('.tab-contents').mCustomScrollbar('destroy');
 	} else {
-		$('.timeline__inner').mCustomScrollbar({
-			theme: 'minimal-dark',
-			mouseWheel: {
-				scrollAmount: 400
-			},
-			//scrollInertia : 400,                        
-			callbacks: {
-				onInit: function () {
-					$('.timeline__inner').mCustomScrollbar('scrollTo', 0);
-				}
-			},
-			alwaysTriggerOffsets: false
-		});
+		// $('.timeline__inner').mCustomScrollbar({
+		// 	theme: 'minimal-dark',
+		// 	mouseWheel: {
+		// 		scrollAmount: 400
+		// 	},
+		// 	//scrollInertia : 400,                        
+		// 	callbacks: {
+		// 		onInit: function () {
+		// 			$('.timeline__inner').mCustomScrollbar('scrollTo', 0);
+		// 		}
+		// 	},
+		// 	alwaysTriggerOffsets: false
+		// });
 		$(".tab-contents").mCustomScrollbar({
 			theme: "minimal-dark",
 			mouseWheel: {
