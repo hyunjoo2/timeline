@@ -5,6 +5,7 @@ $(function () {
     titColor();
     tabSelect();
     fixYear();
+    mobileBtnfix();
 })
 
 
@@ -43,7 +44,7 @@ $(function () {
 
 // button 클릭시 right 표출, class on
 function buttonClick() {
-    $(".timeline-item .button-wrap button").click(function () {
+    $(".timeline-item .button-wrap button, .timeline-content>div .tit a").click(function () {
         $(".content_wrap").addClass("step2");
         $(".content-left").addClass("step2");
         $(".content-right").removeClass("step1");
@@ -75,6 +76,9 @@ function buttonClick() {
         $('.timeline__inner').mCustomScrollbar("update");
         $('.timeline__inner').mCustomScrollbar('scrollTo','.timeline-content>div.on');
 
+
+        
+
         
     });
 
@@ -87,6 +91,8 @@ function buttonClick() {
 
         $('.timeline__inner').mCustomScrollbar("update");
     });
+
+    
 }
 
 
@@ -101,6 +107,9 @@ function fnPageResize() {
     if (innerWidth <= 721) {
         $('.timeline__inner').mCustomScrollbar('destroy');
         $('.tab-contents').mCustomScrollbar('destroy');
+        $(".timeline-content>div .tit a").click(function(){
+            $('html, body').animate({scrollTop : 400}, 400);
+        })
         
     } else {
         $(".tab-contents").mCustomScrollbar({
@@ -117,6 +126,8 @@ function fnPageResize() {
                 updateOnContentResize: true 
             },
         });
+
+        
     }
 
     
@@ -134,6 +145,10 @@ $(window).resize(function () {
 	if (innerWidth <= 721) {
 		$('.timeline__inner').mCustomScrollbar('destroy');
 		$('.tab-contents').mCustomScrollbar('destroy');
+        $(".timeline-content>div .tit a").click(function(){
+            $('html, body').animate({scrollTop : 400}, 400);
+        });
+        
         
 	} else {
 		$('.timeline__inner').mCustomScrollbar({
@@ -165,6 +180,11 @@ $(window).resize(function () {
                 updateOnContentResize: true 
             },
 		});
+
+       
+
+
+
 	}
 });
 
@@ -185,7 +205,9 @@ function titClick() {
     $(titC).click(function () {
         $(this).parents().closest('.timeline-content').children().addClass("on");
         $(titC).not($(this)).parents().closest('.timeline-content').children().removeClass("on");
-    })
+    });
+
+    
 }
 
 function tabSelect() {
@@ -234,4 +256,8 @@ function fixYear() {
             $('.timelinePage .content_wrap').removeClass('fix');
         }
     });
+}
+
+function mobileBtnfix() {
+    
 }
