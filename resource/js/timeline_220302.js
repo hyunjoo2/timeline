@@ -86,10 +86,6 @@ function buttonClick() {
             }
         });
 
-
-
-
-
     });
 
     // 메인으로 돌아가는 button
@@ -101,6 +97,7 @@ function buttonClick() {
 
         $('.timeline__inner').mCustomScrollbar("update");
     });
+    
 
 
 }
@@ -175,11 +172,13 @@ $(window).resize(function () {
     if (innerWidth <= 721) {
         $('.timeline__inner').mCustomScrollbar('destroy');
         $('.tab-contents').mCustomScrollbar('destroy');
+		/*
         $(".timeline-content>div .tit a, .timeline-item .button-wrap button").click(function () {
             $('html, body').animate({
                 scrollTop: 300
             }, 400);
         });
+		*/
         
         var tabSwiper = new Swiper('.tab-button-outer', {
             slidesPerView: 'auto',
