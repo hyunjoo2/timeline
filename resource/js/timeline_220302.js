@@ -129,10 +129,12 @@ function tabSelect() {
 
     // .timeline-item button
     $itemButton.find('a').on('click', function (e) {
-        var target = $(this).attr('href');
-        $tabButtonItem.removeClass(activeClass);
-        $tabButtonItem.parent().addClass(activeClass);
-        $tabSelect.val(target);
+        var target = $(this).attr('href'),
+            $tabTarget = $($(target) == $tabButtonItem.find('a').attr('href'));
+        
+        $tabTarget.removeClass(activeClass);
+        $tabTarget.parent().addClass(activeClass);
+        $tabTarget.val(target);
         $tabContents.hide();
         $(target).show();
         e.preventDefault();
