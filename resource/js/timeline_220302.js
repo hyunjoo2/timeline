@@ -4,7 +4,6 @@ $(function () {
     titClick();
     titColor();
     tabSelect();
-    fixYear();
     //mobileBtnfix();
 })
 
@@ -44,7 +43,7 @@ $(function () {
 
 // button 클릭시 right 표출, class on
 function buttonClick() {
-    $(".timeline-item .button-wrap button, .timeline-content>div .tit a").click(function () {
+    $(".timeline-item .button-wrap button a, .timeline-content>div .tit a").click(function () {
         $(".content_wrap").addClass("step2");
         $(".content-left").addClass("step2");
         $(".content-right").removeClass("step1");
@@ -55,8 +54,7 @@ function buttonClick() {
         $(timeItem).addClass("on");
 
 
-        $('#timeline').mCustomScrollbar('destroy');
-
+        $('#timeline').mCustomScrollbar('destroy'); 
 
 
 
@@ -97,6 +95,116 @@ function buttonClick() {
 
 
 }
+
+
+function tabSelect() {
+    var $tabButtonItem = $('#tab-button li'),
+        $itemButton = $('.timeline-item .button-wrap button'),
+        $tabTit = $('.timeline-content>div .tit'),
+        $tabSelect = $('#tab-select'),
+        $tabContents = $('.tab-contents'),
+        
+        activeClass = 'active';
+
+    $tabButtonItem.first().addClass(activeClass);
+    $tabContents.not(':first').hide();
+
+    //tit
+    $tabTit.find('a').on('click', function (e) {
+        var target = $(this).attr('href');
+
+        $tabButtonItem.removeClass(activeClass);
+        $tabButtonItem.first().addClass(activeClass);
+    
+
+        $tabButtonItem.removeClass(activeClass);
+        $(this).parent().addClass(activeClass);
+        $tabSelect.val(target);
+        $tabContents.hide();
+        $(target).show();
+        e.preventDefault();
+
+    
+    });
+
+    // .timeline-item button
+    $itemButton.find('a').on('click', function (e) {
+        var target = $(this).attr('href');
+        $tabButtonItem.removeClass(activeClass);
+        $tabButtonItem.parent().addClass(activeClass);
+        $tabSelect.val(target);
+        $tabContents.hide();
+        $(target).show();
+        e.preventDefault();
+
+        
+
+        
+        
+    });
+
+    // button
+    $tabButtonItem.find('a').on('click', function (e) {
+        var target = $(this).attr('href');
+
+        $tabButtonItem.removeClass(activeClass);
+        $(this).parent().addClass(activeClass);
+        $tabSelect.val(target);
+        $tabContents.hide();
+        $(target).show();
+        e.preventDefault();
+    });
+
+    // select
+    $tabSelect.on('change', function () {
+        var target = $(this).val(),
+            targetSelectNum = $(this).prop('selectedIndex');
+
+        $tabButtonItem.removeClass(activeClass);
+        $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+        $tabContents.hide();
+        $(target).show();
+    });
+
+
+}
+
+
+
+
+
+
+// 클릭요소 중앙정렬
+function muCenter(target){
+    var snbwrap = $('.tab-button-outer .swiper-wrapper');
+    var targetPos = target.position();
+    var boxWidth = $('.tab-button-outer').width();
+    var wrapWidth=0;
+    snbwrap.find('.swiper-slide').each(function(){ wrapWidth += $(this).outerWidth(); })
+    
+    var selectTargetPos = targetPos.left + target.outerWidth()/2;
+    var pos;
+    if (selectTargetPos <= boxWidth/2)  {
+        pos = 0
+        
+    }
+    else if (wrapWidth - selectTargetPos <= boxWidth/2) {
+        pos = wrapWidth-boxWidth;
+        
+    }
+    else {
+        pos = targetPos.left - (boxWidth/2) + (target.outerWidth()/2);
+        
+    }
+    
+    if(wrapWidth > boxWidth) {
+        setTimeout(function(){snbwrap.css({
+            "transform": "translate3d("+ (pos*-1) +"px, 0, 0)",
+            "transition-duration": "500ms"
+        })}, 200);
+    }
+}
+
 
 
 function fnScrollDown() {
@@ -156,11 +264,6 @@ function fnPageResize() {
 
 
 }
-
-// $(window).load(function () {
-//     setInterval("fnPageResize()", 9000);
-//     fnPageResize();
-// });
 
 
 
@@ -263,137 +366,6 @@ function titClick() {
     
 
 
-}
-
-function tabSelect() {
-    var $tabButtonItem = $('#tab-button li'),
-        $Button = $('.button-wrap button'),
-        $tabTit = $('.timeline-content>div .tit'),
-        $tabSelect = $('#tab-select'),
-        $tabContents = $('.tab-contents'),
-        
-        activeClass = 'active';
-
-    $tabButtonItem.first().addClass(activeClass);
-    $tabContents.not(':first').hide();
-
-    //tit
-    $tabTit.find('a').on('click', function (e) {
-        var target = $(this).attr('href');
-
-        $tabButtonItem.removeClass(activeClass);
-        $tabButtonItem.first().addClass(activeClass);
-        
-        
-
-        
-
-        $tabButtonItem.removeClass(activeClass);
-        $(this).parent().addClass(activeClass);
-        $tabSelect.val(target);
-        $tabContents.hide();
-        $(target).show();
-        e.preventDefault();
-
-    
-    });
-
-    // button
-    $Button.find('a').on('click', function (e) {
-        var target = $(this).attr('href');
-        $tabButtonItem.removeClass(activeClass);
-        $tabButtonItem.parent().addClass(activeClass);
-        $tabSelect.val(target);
-        $tabContents.hide();
-        $(target).show();
-        e.preventDefault();
-    });
-
-    // button
-    $tabButtonItem.find('a').on('click', function (e) {
-        var target = $(this).attr('href');
-
-        $tabButtonItem.removeClass(activeClass);
-        $(this).parent().addClass(activeClass);
-        $tabSelect.val(target);
-        $tabContents.hide();
-        $(target).show();
-        e.preventDefault();
-    });
-
-    // select
-    $tabSelect.on('change', function () {
-        var target = $(this).val(),
-            targetSelectNum = $(this).prop('selectedIndex');
-
-        $tabButtonItem.removeClass(activeClass);
-        $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
-        $tabContents.hide();
-        $(target).show();
-    });
-
-
-}
-
-
-
-function fixYear() {
-    // var filter_Offset = $('.timelinePage .content_wrap .category').offset();
-    // $(window).scroll(function () {
-    //     if ($(document).scrollTop() > filter_Offset.top) {
-    //         $('.timelinePage .content_wrap').addClass('fix');
-    //     } else {
-    //         $('.timelinePage .content_wrap').removeClass('fix');
-    //     }
-    // });
-}
-
-
-
-// $( document ).ready( function() {
-//     var switchbtn = $( '.btnRightSwitch.mobile' ).offset();
-//     $( window ).scroll( function() {
-//       if ( $( document ).scrollTop() > switchbtn.top ) {
-//         $( '.btnRightSwitch.mobile' ).addClass( 'fix' );
-//       }
-//       else {
-//         $( '.btnRightSwitch.mobile' ).removeClass( 'fix' );
-//       }
-//     });
-//   } );
-
-
-
-
-// 클릭요소 중앙정렬
-function muCenter(target){
-    var snbwrap = $('.tab-button-outer .swiper-wrapper');
-    var targetPos = target.position();
-    var boxWidth = $('.tab-button-outer').width();
-    var wrapWidth=0;
-    snbwrap.find('.swiper-slide').each(function(){ wrapWidth += $(this).outerWidth(); })
-    
-    var selectTargetPos = targetPos.left + target.outerWidth()/2;
-    var pos;
-    if (selectTargetPos <= boxWidth/2)  {
-        pos = 0
-        
-    }
-    else if (wrapWidth - selectTargetPos <= boxWidth/2) {
-        pos = wrapWidth-boxWidth;
-        
-    }
-    else {
-        pos = targetPos.left - (boxWidth/2) + (target.outerWidth()/2);
-        
-    }
-    
-    if(wrapWidth > boxWidth) {
-        setTimeout(function(){snbwrap.css({
-            "transform": "translate3d("+ (pos*-1) +"px, 0, 0)",
-            "transition-duration": "500ms"
-        })}, 200);
-    }
 }
 
 

@@ -74,6 +74,7 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 /* button */
 .timeline-item .button-wrap{ display:-webkit-box; display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap;flex-wrap:wrap; margin:-2px -5px; margin-top: auto; -webkit-box-pack: end;-ms-flex-pack: end;justify-content: flex-end;}
 .timeline-item .button-wrap button{width:70px; height:20px; margin: 2px; font-size:10px; color:#888888; background:#ffffff; border:1px solid #e2e2e2; border-radius: 3px;}
+.timeline-item .button-wrap button a{display: block; width:100%; height:100%; color:#000000;}
 .timeline-content>div.ovr .timeline-item .button-wrap button span{color: #cd6b64;}
 .timeline-content>div.dom .timeline-item .button-wrap button span{color: #4178a9;}
 .search button.button-excel{background: #ffffff url(../images/sub/icon-excel.png)no-repeat center; background-size: 2.5rem;}
@@ -408,6 +409,10 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
   .content-left .search>div>div select{width:100%; height:6.3rem;}
 
   .search button{height: 100%;}
+
+
+  .btnRightSwitch{visibility: hidden;}
+
 
 }
 
