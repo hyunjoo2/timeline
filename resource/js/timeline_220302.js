@@ -277,26 +277,26 @@ function tabSelect() {
     $tabButtonItem.first().addClass(activeClass);
     $tabContents.not(':first').hide();
 
-    // tit
-    // $tabTit.find('a').on('click', function (e) {
-    //     var target = $(this).attr('href');
+    //tit
+    $tabTit.find('a').on('click', function (e) {
+        var target = $(this).attr('href');
 
-    //     $tabButtonItem.removeClass(activeClass);
-    //     $tabButtonItem.first().addClass(activeClass);
-    //     //$('a[href="#tab01"]').parent().addClass(activeClass);
-    //     $('#tab-button').css('transform','translate3d(0px, 0px, 0px)')
+        $tabButtonItem.removeClass(activeClass);
+        $tabButtonItem.first().addClass(activeClass);
+        
+        
 
-    //     //$('#' + target).parant().addClass(activeClass);
+        
 
-    //     $tabButtonItem.removeClass(activeClass);
-    //     $(this).parent().addClass(activeClass);
-    //     $tabSelect.val(target);
-    //     $tabContents.hide();
-    //     $(target).show();
-    //     e.preventDefault();
+        $tabButtonItem.removeClass(activeClass);
+        $(this).parent().addClass(activeClass);
+        $tabSelect.val(target);
+        $tabContents.hide();
+        $(target).show();
+        e.preventDefault();
 
     
-    // });
+    });
 
     // button
     $Button.find('a').on('click', function (e) {
