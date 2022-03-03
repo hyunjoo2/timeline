@@ -77,14 +77,7 @@ function buttonClick() {
         $('.timeline__inner').mCustomScrollbar('scrollTo', '.timeline-content>div.on');
 
 
-        var switchbtn = $('.btnRightSwitch.mobile').offset();
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > switchbtn.top) {
-                $('.btnRightSwitch.mobile').addClass('fix');
-            } else {
-                $('.btnRightSwitch.mobile').removeClass('fix');
-            }
-        });
+        
 
     });
 
@@ -96,6 +89,9 @@ function buttonClick() {
         $(".timeline-content>div").removeClass("on");
 
         $('.timeline__inner').mCustomScrollbar("update");
+
+        
+
     });
     
 
@@ -136,6 +132,7 @@ function fnPageResize() {
             target.addClass('on');
             muCenter(target);
         });
+
         
 
     } else {
@@ -195,6 +192,11 @@ $(window).resize(function () {
             target.addClass('on');
             muCenter(target);
         });
+
+        
+
+
+        
 
         
         
@@ -257,17 +259,33 @@ function titClick() {
         $(titC).not($(this)).parents().closest('.timeline-content').children().removeClass("on");
     });
 
+    
+    
+
 
 }
 
 function tabSelect() {
     var $tabButtonItem = $('#tab-button li'),
+        $tabTit = $('.timeline-content>div .tit'),
         $tabSelect = $('#tab-select'),
         $tabContents = $('.tab-contents'),
         activeClass = 'active';
 
     $tabButtonItem.first().addClass(activeClass);
     $tabContents.not(':first').hide();
+
+    // tit
+    // $tabTit.find('a').on('click', function (e) {
+    //     var target = $(this).attr('href');
+
+    //     $tabButtonItem.removeClass(activeClass);
+    //     $tabButtonItem.parent().addClass(activeClass);
+    //     $tabSelect.val(target);
+    //     $tabContents.hide();
+    //     $(target).show();
+    //     e.preventDefault();
+    // });
 
     // button
     $tabButtonItem.find('a').on('click', function (e) {
@@ -355,4 +373,17 @@ function muCenter(target){
         })}, 200);
     }
 }
+
+
+$(function(){
+    var switchbtn = $('.btnRightSwitch').offset();
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > switchbtn.top) {
+            $('.btnRightSwitch').addClass('fix');
+        } else {
+            $('.btnRightSwitch').removeClass('fix');
+        }
+    });
+    
+})
 

@@ -181,7 +181,7 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 
 /* step2 right */
 .content-left.step2 .timeline-item .button-wrap{display: none;}
-.btnRightSwitch{display: none;}
+.btnRightSwitch{visibility: hidden;}
 .content_wrap.step2 .btnRightSwitch{display: block; position:absolute; top: 50%; right:-1.6rem; transform: translateY(-50%);   z-index: 999; }
 .content_wrap.step2 .btnRightSwitch button{ width:3.3rem; height:3.3rem; border-radius: 100%; background: #ffffff url(../images/sub/icon-arrow__right.png)no-repeat center; background-size: 1rem 1.7rem; box-shadow: .3rem .3rem 1.5rem rgba(0,0,0,0.2); border:none;}
 .content_wrap.step2 .content-right{ display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column; flex:1; height: calc(100vh + 60px); margin-left:4rem; padding:2rem 0; visibility: visible; transition:width .3s;}
@@ -228,7 +228,7 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 .content-right .board-view-file a{ display: block; width:100%; font-size:1.6rem;color:#545454;margin-left:0rem;background:url(https://cleanair.kist.re.kr/resources/images/common/icon_file.png) no-repeat left center;padding-left:30px;float:left;}
 .content-right .board-view-link{  -webkit-box-align: self-start;-ms-flex-align: self-start;align-items: self-start; height:auto; padding:1.8rem 2rem; border-top:1px solid #e4e4e4;}
 .content-right .board-view-link p{flex:none; font-size:1.6rem; color:#545454;}
-.content-right .board-view-link a{ display: inline-block; vertical-align: top; color:#2fc5ea; font-size:1.6rem;}
+.content-right .board-view-link a{ display: inline-block; vertical-align: top; color:#2fc5ea; font-size:1.6rem; word-break: break-all;}
 
 /* 보도자료 */
 .content-right .tab-contents select{ width:14rem; height: 4.5rem; font-size: 1.6rem; border: 1px solid #ced4da;}
@@ -265,7 +265,7 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 .content-right .history-box .view-cont .font-weight__m{font-weight: 600; line-height: 2.8rem;}
 
 
-.content_wrap.step2 .btnRightSwitch.mobile{display: none;}
+.content_wrap.step2 .btnRightSwitch.mobile{visibility: hidden; position:unset;}
 .breadMobile, .timelineListMobile{display: none;}
 
 
@@ -274,6 +274,8 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
 
 .search button.button-excel img{width:2.5rem; height:2.5rem;}
 
+
+.affix {top: 0; width: 100%; z-index: 9999 !important;}
 
 
 /*======================================================================================
@@ -343,8 +345,8 @@ html { font-size: 62.5%; font-weight: 300; letter-spacing: -0.25px; }
   .timelinePage.sub_content .page-header{display: none;}
 
   .content_wrap.step2 .content-timeline{position:relative; flex-wrap: wrap; flex-direction: column; height:100%;}
-  .content_wrap.step2 .btnRightSwitch{display: none;}
-  .content_wrap.step2 .btnRightSwitch.mobile{ position:relative; top: 0; display: block; left:0; width:100%; height:8.8rem; transform: none; border-bottom:1px solid #afb5bf;}
+  /* .content_wrap.step2 .btnRightSwitch{display: none;} */
+  .content_wrap.step2 .btnRightSwitch.mobile{ position:relative; top: 0; display: block; left:0; width:100%; height:8.8rem; transform: none; border-bottom:1px solid #afb5bf; visibility: visible;}
   .content_wrap.step2 .btnRightSwitch.mobile.fix{position: fixed; top: 0;}
   .content_wrap.step2 .btnRightSwitch.mobile button{display: flex; align-items: center; width:100%; height:100%; padding:0 3rem; border-radius: 0; font-size:2.4rem; color:#2c2e32; background: #d4d6da; box-shadow: none; border:none; }
   .content_wrap.step2 .btnRightSwitch.mobile button i{ display: block; width:1.1rem; height:1.6rem; margin-right:1.5rem; background:url(../images/sub/icon-arrow__left_.png)no-repeat center; background-size: cover; }
