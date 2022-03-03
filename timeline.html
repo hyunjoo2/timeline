@@ -45,7 +45,10 @@
     <!-- timeline -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    
     <script src="./resource/js/jquery.mCustomScrollbar.min.js"></script>
+    
 
     
 
@@ -372,8 +375,7 @@
                                         </div>
                                     </div>
                                     <div class="button-wrap">
-                                        <button type="button" class="button-excel"><img
-                                                src="./resource/images/sub/icon-excel.png" alt=""></button>
+                                        <button type="button" class="button-excel"></button>
                                     </div>
                                 </div>
                             </div>
@@ -819,17 +821,18 @@
                             <p class="date">2021.01.19</p>
                         </div>
                         <div class="tabs">
-                            <div class="tab-button-outer">
-                                <ul id="tab-button">
-                                    <li><a href="#tab01">개요</a></li>
-                                    <li><a href="#tab02">연혁</a></li>
-                                    <li><a href="#tab03">보도자료</a></li>
-                                    <li><a href="#tab04">근거법령</a></li>
-                                    <li><a href="#tab05">이슈분석</a></li>
-                                    <li><a href="#tab06">정책동향</a></li>
-                                    <li><a href="#tab07">심층분석</a></li>
+                            <div class="tab-button-outer frame swiper-container" >
+                                <ul id="tab-button" class="slidee swiper-wrapper">
+                                    <li class="swiper-slide active"><a href="#tab01">개요</a></li>
+                                    <li class="swiper-slide "><a href="#tab02">연혁</a></li>
+                                    <li class="swiper-slide "><a href="#tab03">보도자료</a></li>
+                                    <li class="swiper-slide "><a href="#tab04">근거법령</a></li>
+                                    <li class="swiper-slide "><a href="#tab05">이슈분석</a></li>
+                                    <li class="swiper-slide "><a href="#tab06">정책동향</a></li>
+                                    <li class="swiper-slide "><a href="#tab07">심층분석</a></li>
                                 </ul>
                             </div>
+                            
                             <!-- <div class="tab-select-outer">
                                 <select id="tab-select">
                                     <option value="#tab01">개요</option>
@@ -1389,6 +1392,9 @@
             </div>
         </section>
 
+       
+
+
         <!-- footer -->
         <footer id="footer" class="">
             <div class="inner">
@@ -1415,43 +1421,11 @@
 </body>
 
 <script src="./resource/js/timeline_220302.js"></script>
+
+
 <script>
-    $(function () {
-
-        // $(".timeline__inner").mCustomScrollbar({
-        //     theme: "minimal-dark",
-        //     mouseWheel: {
-        //         scrollAmount: 400
-        //     },
-    
-        // });
-
-        // $(".tab-contents").mCustomScrollbar({
-        //     theme: "minimal-dark",
-        //     mouseWheel: {
-        //         scrollAmount: 400
-        //     },
-        //     callbacks:{
-        //         onInit:function() {
-        //             $('.content-right').mCustomScrollbar('scrollTo', 0);
-        //         }
-        //     }
-        // });
-
-
+   
         
-
-        // 보도자료 제목 클릭시 view 페이지로 넘어감
-        // $(".boardList .title").click(function(){
-        //     $(this).parants().next(".boardView").show();
-        //     $(this).parents().find(".boardList").hide();
-        // });
-        // $("#btnList").click(function(){
-        //     $(".boardView").hide();
-        //     $(this).parents().find(".boardList").show();
-        // })
-
-    });
 </script>
 
 </html>

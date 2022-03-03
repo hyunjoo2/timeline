@@ -5,7 +5,7 @@ $(function () {
     titColor();
     tabSelect();
     fixYear();
-    mobileBtnfix();
+    //mobileBtnfix();
 })
 
 
@@ -23,7 +23,7 @@ $(function () {
     // });
 
     var position = 0;
-    
+
     $('.timeline__inner').mCustomScrollbar({
         theme: 'minimal-dark',
         mouseWheel: {
@@ -35,10 +35,10 @@ $(function () {
             }
         },
         setTop: position + 'px',
-        
+
     });
 
-    
+
 })
 
 
@@ -74,12 +74,22 @@ function buttonClick() {
 
         //left item 가운데 정렬
         $('.timeline__inner').mCustomScrollbar("update");
-        $('.timeline__inner').mCustomScrollbar('scrollTo','.timeline-content>div.on');
+        $('.timeline__inner').mCustomScrollbar('scrollTo', '.timeline-content>div.on');
 
 
-        
+        var switchbtn = $('.btnRightSwitch.mobile').offset();
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > switchbtn.top) {
+                $('.btnRightSwitch.mobile').addClass('fix');
+            } else {
+                $('.btnRightSwitch.mobile').removeClass('fix');
+            }
+        });
 
-        
+
+
+
+
     });
 
     // 메인으로 돌아가는 button
@@ -92,7 +102,7 @@ function buttonClick() {
         $('.timeline__inner').mCustomScrollbar("update");
     });
 
-    
+
 }
 
 
@@ -102,15 +112,35 @@ function fnScrollDown() {
 window.fnScrollDown = fnScrollDown;
 
 
+
+
 function fnPageResize() {
     var innerWidth = window.innerWidth;
     if (innerWidth <= 721) {
         $('.timeline__inner').mCustomScrollbar('destroy');
         $('.tab-contents').mCustomScrollbar('destroy');
-        $(".timeline-content>div .tit a").click(function(){
-            $('html, body').animate({scrollTop : 400}, 400);
-        })
+        $(".timeline-content>div .tit a, .timeline-item .button-wrap button").click(function () {
+            $('html, body').animate({
+                scrollTop: 300
+            }, 400);
+        });
+        var tabSwiper = new Swiper('.tab-button-outer', {
+            slidesPerView: 'auto',
+            preventClicks: true,
+            preventClicksPropagation: false,
+            observer: true,
+            observeParents: true,
+            
+        });
+        var $lankTitle = $('.tab-button-outer .swiper-slide a');
+        $lankTitle.click(function(){
+            var target = $(this).parent();
+            $lankTitle.parent().removeClass('on')
+            target.addClass('on');
+            muCenter(target);
+        });
         
+
     } else {
         $(".tab-contents").mCustomScrollbar({
             theme: "minimal-dark",
@@ -122,15 +152,15 @@ function fnPageResize() {
                     $('.content-right').mCustomScrollbar('scrollTo', 0);
                 }
             },
-            advanced:{ 
-                updateOnContentResize: true 
+            advanced: {
+                updateOnContentResize: true
             },
         });
 
-        
+
     }
 
-    
+
 }
 
 // $(window).load(function () {
@@ -141,61 +171,82 @@ function fnPageResize() {
 
 
 $(window).resize(function () {
-	var innerWidth = window.innerWidth;
-	if (innerWidth <= 721) {
-		$('.timeline__inner').mCustomScrollbar('destroy');
-		$('.tab-contents').mCustomScrollbar('destroy');
-        $(".timeline-content>div .tit a").click(function(){
-            $('html, body').animate({scrollTop : 400}, 400);
+    var innerWidth = window.innerWidth;
+    if (innerWidth <= 721) {
+        $('.timeline__inner').mCustomScrollbar('destroy');
+        $('.tab-contents').mCustomScrollbar('destroy');
+        $(".timeline-content>div .tit a, .timeline-item .button-wrap button").click(function () {
+            $('html, body').animate({
+                scrollTop: 300
+            }, 400);
         });
         
+        var tabSwiper = new Swiper('.tab-button-outer', {
+            slidesPerView: 'auto',
+            preventClicks: true,
+            preventClicksPropagation: false,
+            observer: true,
+            observeParents: true,
+            
+        });
+        var $lankTitle = $('.tab-button-outer .swiper-slide a');
+        $lankTitle.click(function(){
+            var target = $(this).parent();
+            $lankTitle.parent().removeClass('on')
+            target.addClass('on');
+            muCenter(target);
+        });
+
         
-	} else {
-		$('.timeline__inner').mCustomScrollbar({
-			theme: 'minimal-dark',
-			mouseWheel: {
-				scrollAmount: 250
-			},
-			//scrollInertia : 400,                        
-			callbacks: {
-				onInit: function () {
-					$('.timeline__inner').mCustomScrollbar('scrollTo', 0);
-				}
-			},
-            advanced:{ 
-                updateOnContentResize: true 
+        
+
+
+    } else {
+        $('.timeline__inner').mCustomScrollbar({
+            theme: 'minimal-dark',
+            mouseWheel: {
+                scrollAmount: 250
             },
-		});
-		$(".tab-contents").mCustomScrollbar({
-			theme: "minimal-dark",
-			mouseWheel: {
-				scrollAmount: 250
-			},
-			callbacks: {
-				onInit: function () {
-					$('.content-right').mCustomScrollbar('scrollTo', 0);
-				}
-			},
-            advanced:{ 
-                updateOnContentResize: true 
+            //scrollInertia : 400,                        
+            callbacks: {
+                onInit: function () {
+                    $('.timeline__inner').mCustomScrollbar('scrollTo', 0);
+                }
             },
-		});
+            advanced: {
+                updateOnContentResize: true
+            },
+        });
+        $(".tab-contents").mCustomScrollbar({
+            theme: "minimal-dark",
+            mouseWheel: {
+                scrollAmount: 250
+            },
+            callbacks: {
+                onInit: function () {
+                    $('.content-right').mCustomScrollbar('scrollTo', 0);
+                }
+            },
+            advanced: {
+                updateOnContentResize: true
+            },
+        });
 
-       
 
 
 
-	}
+
+    }
 });
 
 
 function titColor() {
-	$(".timeline-content>div.ovr a, .timeline-content>div.ovr button").click(function () {
-		$(this).parents().find(".content-left").next().children(".cateTit").removeClass("dom").addClass("ovr");
-	});
-	$(".timeline-content>div.dom a, .timeline-content>div.dom button").click(function () {
-		$(this).parents().find(".content-left").next().children(".cateTit").removeClass("ovr").addClass("dom");
-	})
+    $(".timeline-content>div.ovr a, .timeline-content>div.ovr button").click(function () {
+        $(this).parents().find(".content-left").next().children(".cateTit").removeClass("dom").addClass("ovr");
+    });
+    $(".timeline-content>div.dom a, .timeline-content>div.dom button").click(function () {
+        $(this).parents().find(".content-left").next().children(".cateTit").removeClass("ovr").addClass("dom");
+    })
 }
 
 // title 클릭
@@ -207,7 +258,7 @@ function titClick() {
         $(titC).not($(this)).parents().closest('.timeline-content').children().removeClass("on");
     });
 
-    
+
 }
 
 function tabSelect() {
@@ -248,16 +299,61 @@ function tabSelect() {
 
 
 function fixYear() {
-    var filter_Offset = $('.timelinePage .content_wrap .category').offset();
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > filter_Offset.top) {
-            $('.timelinePage .content_wrap').addClass('fix');
-        } else {
-            $('.timelinePage .content_wrap').removeClass('fix');
-        }
-    });
+    // var filter_Offset = $('.timelinePage .content_wrap .category').offset();
+    // $(window).scroll(function () {
+    //     if ($(document).scrollTop() > filter_Offset.top) {
+    //         $('.timelinePage .content_wrap').addClass('fix');
+    //     } else {
+    //         $('.timelinePage .content_wrap').removeClass('fix');
+    //     }
+    // });
 }
 
-function mobileBtnfix() {
+
+
+// $( document ).ready( function() {
+//     var switchbtn = $( '.btnRightSwitch.mobile' ).offset();
+//     $( window ).scroll( function() {
+//       if ( $( document ).scrollTop() > switchbtn.top ) {
+//         $( '.btnRightSwitch.mobile' ).addClass( 'fix' );
+//       }
+//       else {
+//         $( '.btnRightSwitch.mobile' ).removeClass( 'fix' );
+//       }
+//     });
+//   } );
+
+
+
+
+// 클릭요소 중앙정렬
+function muCenter(target){
+    var snbwrap = $('.tab-button-outer .swiper-wrapper');
+    var targetPos = target.position();
+    var boxWidth = $('.tab-button-outer').width();
+    var wrapWidth=0;
+    snbwrap.find('.swiper-slide').each(function(){ wrapWidth += $(this).outerWidth(); })
     
+    var selectTargetPos = targetPos.left + target.outerWidth()/2;
+    var pos;
+    if (selectTargetPos <= boxWidth/2)  {
+        pos = 0
+        
+    }
+    else if (wrapWidth - selectTargetPos <= boxWidth/2) {
+        pos = wrapWidth-boxWidth;
+        
+    }
+    else {
+        pos = targetPos.left - (boxWidth/2) + (target.outerWidth()/2);
+        
+    }
+    
+    if(wrapWidth > boxWidth) {
+        setTimeout(function(){snbwrap.css({
+            "transform": "translate3d("+ (pos*-1) +"px, 0, 0)",
+            "transition-duration": "500ms"
+        })}, 200);
+    }
 }
+
