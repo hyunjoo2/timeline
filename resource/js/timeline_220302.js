@@ -54,7 +54,7 @@ function buttonClick() {
         $(timeItem).addClass("on");
 
 
-        $('#timeline').mCustomScrollbar('destroy'); 
+        $('#timeline').mCustomScrollbar('destroy');
 
 
 
@@ -76,7 +76,7 @@ function buttonClick() {
 
 
         $('.timeline__inner').mCustomScrollbar("update");
-        
+
 
     });
 
@@ -89,12 +89,12 @@ function buttonClick() {
 
         $('.timeline__inner').mCustomScrollbar("update");
 
-        
 
-        
+
+
 
     });
-    
+
 
 
 }
@@ -106,7 +106,7 @@ function tabSelect() {
         $tabTit = $('.timeline-content>div .tit'),
         $tabSelect = $('#tab-select'),
         $tabContents = $('.tab-contents'),
-        
+
         activeClass = 'active';
 
     $tabButtonItem.first().addClass(activeClass);
@@ -118,7 +118,7 @@ function tabSelect() {
 
     //     $tabButtonItem.removeClass(activeClass);
     //     $tabButtonItem.first().addClass(activeClass);
-    
+
 
     //     $tabButtonItem.removeClass(activeClass);
     //     $(this).parent().addClass(activeClass);
@@ -127,33 +127,33 @@ function tabSelect() {
     //     $(target).show();
     //     e.preventDefault();
 
-    
+
     // });
 
-    // .timeline-item button
-    // $itemButton.find('a').on('click', function (e) {
-    //     var target = $(this).attr('href'),
-    //         targetTab = $('#tab-button li').find('a').attr('href');
-        
-        
-    //         if( target == targetTab ){
-    //             $('#tab-button li').find('a').addClass('hohohoho');
-    //         }else{
-         
-    //         }
-        
-    //  });
+    
 
     // button
     $tabButtonItem.find('a').on('click', function (e) {
         var target = $(this).attr('href');
 
+        $tabButtonItem.removeClass("on");
         $tabButtonItem.removeClass(activeClass);
         $(this).parent().addClass(activeClass);
         $tabSelect.val(target);
         $tabContents.hide();
         $(target).show();
         e.preventDefault();
+    });
+
+    // .timeline-item button
+    $itemButton.find('a').on('click', function (e) {
+        var target = $(this).attr('href'),
+            tabTarget = $('#tab-button').find('a[href="' + target + '"]');
+
+        $(tabTarget).parent('li').addClass('on');
+
+    
+
     });
 
     // select
@@ -176,33 +176,35 @@ function tabSelect() {
 
 
 // 클릭요소 중앙정렬
-function muCenter(target){
+function muCenter(target) {
     var snbwrap = $('.tab-button-outer .swiper-wrapper');
     var targetPos = target.position();
     var boxWidth = $('.tab-button-outer').width();
-    var wrapWidth=0;
-    snbwrap.find('.swiper-slide').each(function(){ wrapWidth += $(this).outerWidth(); })
-    
-    var selectTargetPos = targetPos.left + target.outerWidth()/2;
+    var wrapWidth = 0;
+    snbwrap.find('.swiper-slide').each(function () {
+        wrapWidth += $(this).outerWidth();
+    })
+
+    var selectTargetPos = targetPos.left + target.outerWidth() / 2;
     var pos;
-    if (selectTargetPos <= boxWidth/2)  {
+    if (selectTargetPos <= boxWidth / 2) {
         pos = 0
-        
+
+    } else if (wrapWidth - selectTargetPos <= boxWidth / 2) {
+        pos = wrapWidth - boxWidth;
+
+    } else {
+        pos = targetPos.left - (boxWidth / 2) + (target.outerWidth() / 2);
+
     }
-    else if (wrapWidth - selectTargetPos <= boxWidth/2) {
-        pos = wrapWidth-boxWidth;
-        
-    }
-    else {
-        pos = targetPos.left - (boxWidth/2) + (target.outerWidth()/2);
-        
-    }
-    
-    if(wrapWidth > boxWidth) {
-        setTimeout(function(){snbwrap.css({
-            "transform": "translate3d("+ (pos*-1) +"px, 0, 0)",
-            "transition-duration": "500ms"
-        })}, 200);
+
+    if (wrapWidth > boxWidth) {
+        setTimeout(function () {
+            snbwrap.css({
+                "transform": "translate3d(" + (pos * -1) + "px, 0, 0)",
+                "transition-duration": "500ms"
+            })
+        }, 200);
     }
 }
 
@@ -232,17 +234,17 @@ function fnPageResize() {
             preventClicksPropagation: false,
             observer: true,
             observeParents: true,
-            
+
         });
         var $lankTitle = $('.tab-button-outer .swiper-slide a');
-        $lankTitle.click(function(){
+        $lankTitle.click(function () {
             var target = $(this).parent();
             $lankTitle.parent().removeClass('on')
             target.addClass('on');
             muCenter(target);
         });
 
-        
+
 
     } else {
         $(".tab-contents").mCustomScrollbar({
@@ -273,37 +275,37 @@ $(window).resize(function () {
     if (innerWidth <= 721) {
         $('.timeline__inner').mCustomScrollbar('destroy');
         $('.tab-contents').mCustomScrollbar('destroy');
-		/*
+        /*
         $(".timeline-content>div .tit a, .timeline-item .button-wrap button").click(function () {
             $('html, body').animate({
                 scrollTop: 300
             }, 400);
         });
 		*/
-        
+
         var tabSwiper = new Swiper('.tab-button-outer', {
             slidesPerView: 'auto',
             preventClicks: true,
             preventClicksPropagation: false,
             observer: true,
             observeParents: true,
-            
+
         });
         var $lankTitle = $('.tab-button-outer .swiper-slide a');
-        $lankTitle.click(function(){
+        $lankTitle.click(function () {
             var target = $(this).parent();
             $lankTitle.parent().removeClass('on')
             target.addClass('on');
             muCenter(target);
         });
 
-        
 
 
-        
 
-        
-        
+
+
+
+
 
 
     } else {
@@ -366,14 +368,14 @@ function titClick() {
     $('.timeline__inner').mCustomScrollbar("update");
     $('.timeline__inner').mCustomScrollbar('scrollTo', '.timeline-content>div.on');
 
-    
-    
+
+
 
 
 }
 
 
-$(function(){
+$(function () {
     var switchbtn = $('.btnRightSwitch').offset();
     $(window).scroll(function () {
         if ($(document).scrollTop() > switchbtn.top) {
@@ -382,6 +384,5 @@ $(function(){
             $('.btnRightSwitch').removeClass('fix');
         }
     });
-    
-})
 
+})
