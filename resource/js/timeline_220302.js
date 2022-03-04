@@ -59,14 +59,14 @@ function buttonClick() {
 
 
 
-        var divOvr = $(this).parents().closest('.timeline-item').parent();
-        if ($(divOvr).hasClass("ovr")) {
-            $(".step2 .category__inner >div.ovr").addClass("active");
-            $(".step2 .category__inner >div.dom").removeClass("active");
-        } else {
-            $(".step2 .category__inner >div.ovr").removeClass("active");
-            $(".step2 .category__inner >div.dom").addClass("active");
-        };
+        // var divOvr = $(this).parents().closest('.timeline-item').parent();
+        // if ($(divOvr).hasClass("ovr")) {
+        //     $(".step2 .category__inner >div.ovr").addClass("active");
+        //     $(".step2 .category__inner >div.dom").removeClass("active");
+        // } else {
+        //     $(".step2 .category__inner >div.ovr").removeClass("active");
+        //     $(".step2 .category__inner >div.dom").addClass("active");
+        // };
 
 
 
