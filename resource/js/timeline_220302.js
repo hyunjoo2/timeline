@@ -50,7 +50,7 @@ function buttonClick() {
         $(this).parents().find('.timeline-content').children().find(".timeline-item").removeClass("on");
 
 
-        var timeItem = $(this).parents().closest('.timeline-content').children();
+        var timeItem = $(this).parents().closest('.timeline-content').children().not('.nodata');
         $(timeItem).addClass("on");
 
 
@@ -75,6 +75,7 @@ function buttonClick() {
         $('.timeline__inner').mCustomScrollbar('scrollTo', '.timeline-content>div.on');
 
 
+        $('.timeline__inner').mCustomScrollbar("update");
         
 
     });
@@ -90,15 +91,17 @@ function buttonClick() {
 
         
 
+        
+
     });
     
 
 
 }
 
-
+// 카테고리 tab, button click
 function tabSelect() {
-    var $tabButtonItem = $('#tab-button li'),
+    var $tabButtonItem = $('#tab-button li, .timeline-item .button-wrap button'),
         $itemButton = $('.timeline-item .button-wrap button'),
         $tabTit = $('.timeline-content>div .tit'),
         $tabSelect = $('#tab-select'),
@@ -110,40 +113,36 @@ function tabSelect() {
     $tabContents.not(':first').hide();
 
     //tit
-    $tabTit.find('a').on('click', function (e) {
-        var target = $(this).attr('href');
+    // $tabTit.find('a').on('click', function (e) {
+    //     var target = $(this).attr('href');
 
-        $tabButtonItem.removeClass(activeClass);
-        $tabButtonItem.first().addClass(activeClass);
+    //     $tabButtonItem.removeClass(activeClass);
+    //     $tabButtonItem.first().addClass(activeClass);
     
 
-        $tabButtonItem.removeClass(activeClass);
-        $(this).parent().addClass(activeClass);
-        $tabSelect.val(target);
-        $tabContents.hide();
-        $(target).show();
-        e.preventDefault();
+    //     $tabButtonItem.removeClass(activeClass);
+    //     $(this).parent().addClass(activeClass);
+    //     $tabSelect.val(target);
+    //     $tabContents.hide();
+    //     $(target).show();
+    //     e.preventDefault();
 
     
-    });
+    // });
 
     // .timeline-item button
-    $itemButton.find('a').on('click', function (e) {
-        var target = $(this).attr('href'),
-            $tabTarget = $($(target) == $tabButtonItem.find('a').attr('href'));
-        
-        $tabTarget.removeClass(activeClass);
-        $tabTarget.parent().addClass(activeClass);
-        $tabTarget.val(target);
-        $tabContents.hide();
-        $(target).show();
-        e.preventDefault();
-
-        
-
+    // $itemButton.find('a').on('click', function (e) {
+    //     var target = $(this).attr('href'),
+    //         targetTab = $('#tab-button li').find('a').attr('href');
         
         
-    });
+    //         if( target == targetTab ){
+    //             $('#tab-button li').find('a').addClass('hohohoho');
+    //         }else{
+         
+    //         }
+        
+    //  });
 
     // button
     $tabButtonItem.find('a').on('click', function (e) {
@@ -158,15 +157,15 @@ function tabSelect() {
     });
 
     // select
-    $tabSelect.on('change', function () {
-        var target = $(this).val(),
-            targetSelectNum = $(this).prop('selectedIndex');
+    // $tabSelect.on('change', function () {
+    //     var target = $(this).val(),
+    //         targetSelectNum = $(this).prop('selectedIndex');
 
-        $tabButtonItem.removeClass(activeClass);
-        $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
-        $tabContents.hide();
-        $(target).show();
-    });
+    //     $tabButtonItem.removeClass(activeClass);
+    //     $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+    //     $tabContents.hide();
+    //     $(target).show();
+    // });
 
 
 }
@@ -363,6 +362,9 @@ function titClick() {
         $(this).parents().closest('.timeline-content').children().addClass("on");
         $(titC).not($(this)).parents().closest('.timeline-content').children().removeClass("on");
     });
+
+    $('.timeline__inner').mCustomScrollbar("update");
+    $('.timeline__inner').mCustomScrollbar('scrollTo', '.timeline-content>div.on');
 
     
     
